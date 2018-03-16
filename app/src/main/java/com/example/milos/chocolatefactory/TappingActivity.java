@@ -13,6 +13,10 @@ public class TappingActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private ImageButton mChocolateButton;
+    private TextView mChocoCount;
+    private TextView mCPS;
+
+    private Integer count = 0;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -40,28 +44,21 @@ public class TappingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tapping);
 
         mTextMessage = (TextView) findViewById(R.id.message);
+        mChocoCount = (TextView) findViewById(R.id.choco_count);
+        mCPS = (TextView) findViewById(R.id.CPS);
+
         mChocolateButton = (ImageButton) findViewById(R.id.chocolateButton);
-//        mChocolateButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                String message = mMessageBodyEditText.getText().toString();
-//
-//                // in case user does not fill anything
-//                if (message.isEmpty()) {
-//                    Toast.makeText(getApplicationContext(), "Fill the message ;)", Toast.LENGTH_SHORT)
-//                            .show();
-//                    return;
-//                }
-//
+        mChocolateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count ++;
+                mChocoCount.setText(String.valueOf(count));
+
 //                Intent intent = new Intent(getBaseContext(), SecondActivity.class);
 //                intent.putExtra("EXTRA_MESSAGE", message);
 //                startActivity(intent);
-//
-//                Toast.makeText(getApplicationContext(), "Sending " + message, Toast.LENGTH_SHORT)
-//                        .show();
-//            }
-//        });
+            }
+        });
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
