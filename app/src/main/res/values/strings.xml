@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Chocolate Factory</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_tapping">Chocolate Tapping</string>
+    <string name="title_building">Buildings</string>
+    <string name="title_upgrade">Upgrades</string>
+
+    <string name="todo_picture">TODO picture</string>
 </resources>
