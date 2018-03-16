@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,7 +15,7 @@ public class TappingActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private ImageButton mChocolateButton;
     private TextView mChocoCount;
-    private TextView mCPS;
+    private TextView mCPS; // FIXME: not needed?
 
     private Integer count = 0;
 
