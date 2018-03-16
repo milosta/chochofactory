@@ -5,4 +5,8 @@
     <string name="title_upgrade">Upgrades</string>
 
     <string name="tapping_help">Tap the chocolate bar</string>
+    <string name="title_activity_building">BuildingActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

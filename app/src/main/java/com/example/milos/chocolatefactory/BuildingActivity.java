@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class TappingActivity extends AppCompatActivity {
+public class BuildingActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -34,7 +34,7 @@ public class TappingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tapping);
+        setContentView(R.layout.activity_building);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
