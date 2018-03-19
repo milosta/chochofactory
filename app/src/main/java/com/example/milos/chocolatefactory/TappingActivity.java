@@ -18,7 +18,7 @@ public class TappingActivity extends AppCompatActivity {
     private TextView mCPS;
 
     private Integer count = 0;
-    private Integer cps = 1;
+    private Integer cps = 0;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
