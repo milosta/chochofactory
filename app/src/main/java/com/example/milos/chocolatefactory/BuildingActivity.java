@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -18,7 +19,10 @@ public class BuildingActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
-                    mTextMessage.setText(R.string.title_tapping);
+//                    finish();
+                    Intent intent = new Intent(getBaseContext(), TappingActivity.class);
+                    intent.putExtra("EXTRA_MESSAGE", "Value");
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_building:
                     mTextMessage.setText(R.string.title_building);

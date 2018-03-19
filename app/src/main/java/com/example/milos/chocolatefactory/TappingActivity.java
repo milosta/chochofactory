@@ -15,9 +15,10 @@ public class TappingActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private ImageButton mChocolateButton;
     private TextView mChocoCount;
-    private TextView mCPS; // FIXME: not needed?
+    private TextView mCPS;
 
     private Integer count = 0;
+    private Integer cps = 1;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -29,7 +30,9 @@ public class TappingActivity extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_tapping);
                     return true;
                 case R.id.navigation_building:
-                    mTextMessage.setText(R.string.title_building);
+                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
+                    intent.putExtra("EXTRA_MESSAGE", "Value");
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_upgrade:
                     mTextMessage.setText(R.string.title_upgrade);
@@ -54,15 +57,24 @@ public class TappingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 count ++;
                 mChocoCount.setText(String.valueOf(count));
-
-//                Intent intent = new Intent(getBaseContext(), SecondActivity.class);
-//                intent.putExtra("EXTRA_MESSAGE", message);
-//                startActivity(intent);
             }
         });
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+//        prepareUi();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        prepareUi();
+    }
+
+    private void prepareUi() {
+        mChocoCount.setText(String.valueOf(count));
+        mCPS.setText(String.valueOf(cps));
     }
 
 }
