@@ -20,7 +20,7 @@ public class BuildingActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
 //                    finish();
-                    Intent intent = new Intent(getBaseContext(), TappingActivity.class);
+                    Intent intent = new Intent(getBaseContext(), GameActivity.class);
                     intent.putExtra("EXTRA_MESSAGE", "Value");
                     startActivity(intent);
                     return true;

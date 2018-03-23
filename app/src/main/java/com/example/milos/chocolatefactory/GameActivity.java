@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class TappingActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private ImageButton mChocolateButton;
