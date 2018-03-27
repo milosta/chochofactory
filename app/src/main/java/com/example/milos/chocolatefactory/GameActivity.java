@@ -30,9 +30,10 @@ public class GameActivity extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_tapping);
                     return true;
                 case R.id.navigation_building:
-                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
-                    intent.putExtra("EXTRA_MESSAGE", "Value");
-                    startActivity(intent);
+//                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
+//                    intent.putExtra("EXTRA_MESSAGE", "Value");
+//                    startActivity(intent);
+                    mTextMessage.setText("Buildings");
                     return true;
                 case R.id.navigation_upgrade:
                     mTextMessage.setText(R.string.title_upgrade);
@@ -45,7 +46,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tapping);
+        setContentView(R.layout.activity_game);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         mChocoCount = (TextView) findViewById(R.id.choco_count);
