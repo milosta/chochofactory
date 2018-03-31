@@ -24,17 +24,16 @@ public class GameActivity extends AppCompatActivity {
             Fragment selectedFragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
-//                    mTextMessage.setText(R.string.title_tapping);
                     selectedFragment = TappingFragment.newInstance();
                 case R.id.navigation_building:
 //                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
 //                    intent.putExtra("EXTRA_MESSAGE", "Value");
 //                    startActivity(intent);
-//                    mTextMessage.setText("Buildings");
-                    return true;
+
+                    selectedFragment = BuildingFragment.newInstance();
+
                 case R.id.navigation_upgrade:
-//                    mTextMessage.setText(R.string.title_upgrade);
-                    return true;
+                    selectedFragment = UpgradeFragment.newInstance();
             }
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.frame_layout, selectedFragment);
