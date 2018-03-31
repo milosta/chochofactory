@@ -10,6 +10,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="hello_building_fragment">Hello buildingfragment</string>
     <string name="chocolateButtonDesc">Chocolate bar to tap</string>
+
+    <string name="hello_building_fragment">Hello building fragment</string>
+    <string name="hello_upgrade_fragment">Hello upgrade fragment</string>
+
 </resources>
