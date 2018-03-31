@@ -25,7 +25,7 @@ public class GameActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
 //                    mTextMessage.setText(R.string.title_tapping);
-                    selectedFragment = BlankFragment.newInstance();
+                    selectedFragment = TappingFragment.newInstance();
                 case R.id.navigation_building:
 //                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
 //                    intent.putExtra("EXTRA_MESSAGE", "Value");
@@ -65,7 +65,7 @@ public class GameActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, BlankFragment.newInstance());
+        transaction.replace(R.id.frame_layout, TappingFragment.newInstance());
         transaction.commit();
     }
 
