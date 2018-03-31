@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link TappingFragment.OnFragmentInteractionListener} interface
+ * {@link BlankFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link TappingFragment#newInstance} factory method to
+ * Use the {@link BlankFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TappingFragment2 extends Fragment {
+public class BlankFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class TappingFragment2 extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public TappingFragment() {
+    public BlankFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class TappingFragment2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment TappingFragment.
+     * @return A new instance of fragment BlankFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static TappingFragment newInstance(String param1, String param2) {
-        TappingFragment fragment = new TappingFragment();
+    public static BlankFragment newInstance(String param1, String param2) {
+        BlankFragment fragment = new BlankFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -106,36 +106,3 @@ public class TappingFragment2 extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 }
-
-
-
-//package com.example.milos.chocolatefactory;
-//
-//
-//import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-//import android.widget.TextView;
-//
-///**
-// * A simple {@link Fragment} subclass.
-// */
-//public class BlankFragment extends Fragment {
-//
-//
-//    public BlankFragment() {
-//        // Required empty public constructor
-//    }
-//
-//
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        TextView textView = new TextView(getActivity());
-//        textView.setText(R.string.hello_blank_fragment);
-//        return textView;
-//    }
-//
-//}
