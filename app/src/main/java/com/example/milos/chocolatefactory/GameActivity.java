@@ -25,15 +25,18 @@ public class GameActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
                     selectedFragment = TappingFragment.newInstance();
+                    break;
                 case R.id.navigation_building:
 //                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
 //                    intent.putExtra("EXTRA_MESSAGE", "Value");
 //                    startActivity(intent);
 
                     selectedFragment = BuildingFragment.newInstance();
+                    break;
 
                 case R.id.navigation_upgrade:
                     selectedFragment = UpgradeFragment.newInstance();
+                    break;
             }
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.frame_layout, selectedFragment);
