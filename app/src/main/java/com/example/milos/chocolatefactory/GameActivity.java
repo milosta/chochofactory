@@ -7,14 +7,15 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
 
-//    private TextView mChocoCount;
-//    private TextView mCPS;
-//
-//    private Integer count = 0;
-//    private Integer cps = 0;
+    private TextView mCountTV;
+    private TextView mCpsTV;
+
+    private Integer count = 0;
+    private Integer cps = 0;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -27,13 +28,8 @@ public class GameActivity extends AppCompatActivity {
                     selectedFragment = TappingFragment.newInstance();
                     break;
                 case R.id.navigation_building:
-//                    Intent intent = new Intent(getBaseContext(), BuildingActivity.class);
-//                    intent.putExtra("EXTRA_MESSAGE", "Value");
-//                    startActivity(intent);
-
                     selectedFragment = BuildingFragment.newInstance();
                     break;
-
                 case R.id.navigation_upgrade:
                     selectedFragment = UpgradeFragment.newInstance();
                     break;
@@ -50,18 +46,8 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-//        mTextMessage = (TextView) findViewById(R.id.message);
-//        mChocoCount = (TextView) findViewById(R.id.choco_count);
-//        mCPS = (TextView) findViewById(R.id.CPS);
-//
-//        mChocolateButton = (ImageButton) findViewById(R.id.chocolateButton);
-//        mChocolateButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                count ++;
-//                mChocoCount.setText(String.valueOf(count));
-//            }
-//        });
+        mCountTV = (TextView) findViewById(R.id.choco_count);
+        mCpsTV = (TextView) findViewById(R.id.CPS);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

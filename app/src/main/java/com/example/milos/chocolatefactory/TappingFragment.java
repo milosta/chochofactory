@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 /**
@@ -14,8 +16,8 @@ import android.view.ViewGroup;
  */
 public class TappingFragment extends Fragment {
 
-//    private TextView mTextMessage;
-//    private ImageButton mChocolateButton;
+    private TextView mTextMessage;
+    private ImageButton mChocolateButton;
 
     /**
      * Use this factory method to create a new instance of
@@ -27,6 +29,20 @@ public class TappingFragment extends Fragment {
         TappingFragment fragment = new TappingFragment();
         return fragment;
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        mChocolateButton = (ImageButton) findViewById(R.id.chocolateButton);
+//        mChocolateButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                count ++;
+//                mChocoCount.setText(String.valueOf(count));
+//            }
+//        });
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
