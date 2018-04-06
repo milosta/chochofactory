@@ -14,5 +14,7 @@
 
     <string name="hello_building_fragment">Hello building fragment</string>
     <string name="hello_upgrade_fragment">Hello upgrade fragment</string>
+    <string name="chocolate">Chocolate:</string>
+    <string name="cps">CPS:</string>
 
 </resources>
