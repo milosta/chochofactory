@@ -7,9 +7,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity
+        implements TappingFragment.OnFragmentInteractionListener{
 
     private TextView mCountTV;
     private TextView mCpsTV;
@@ -67,5 +69,10 @@ public class GameActivity extends AppCompatActivity {
 //        mChocoCount.setText(String.valueOf(count));
 //        mCPS.setText(String.valueOf(cps));
 //    }
+
+    public void chocolateClicked() {
+        count ++;
+        mCountTV.setText(String.valueOf(count));
+    }
 
 }

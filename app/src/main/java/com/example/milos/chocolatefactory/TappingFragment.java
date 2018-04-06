@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,9 +15,9 @@ import android.widget.TextView;
  * Use the {@link TappingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TappingFragment extends Fragment {
+public class TappingFragment extends Fragment{
 
-    private TextView mTextMessage;
+    private Activity activity;
     private ImageButton mChocolateButton;
 
     /**
@@ -33,7 +34,44 @@ public class TappingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        mChocolateButton = (ImageButton) findViewById(R.id.chocolateButton);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_tapping, container, false);
+
+        // Set Views
+        mChocolateButton = (ImageButton) view.findViewById(R.id.chocolateButton);
+        mChocolateButton.setOnClickListener(new View.OnClickListener() { // (this;) implements View.OnClickListener
+            @Override
+            public void onClick(View v) {
+                ((OnFragmentInteractionListener) activity).chocolateClicked();
+            }
+        });
+        this.activity = getActivity();
+
+        return view;
+    }
+
+//    @Override
+//    public void onClick(View v) {
+//        ((OnFragmentInteractionListener) activity).chocolateClicked();
+//    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     */
+    public interface OnFragmentInteractionListener {
+        void chocolateClicked();
+    }
+
+}
+
 //        mChocolateButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -41,14 +79,3 @@ public class TappingFragment extends Fragment {
 //                mChocoCount.setText(String.valueOf(count));
 //            }
 //        });
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tapping, container, false);
-    }
-
-}
