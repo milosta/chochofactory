@@ -8,7 +8,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity
@@ -38,7 +37,7 @@ public class GameActivity extends AppCompatActivity
                     selectedFragment = TappingFragment.newInstance();
                     break;
                 case R.id.navigation_building:
-                    selectedFragment = BuildingFragment.newInstance();
+                    selectedFragment = BuildingFragmentOld.newInstance();
                     break;
                 case R.id.navigation_upgrade:
                     selectedFragment = UpgradeFragment.newInstance();
