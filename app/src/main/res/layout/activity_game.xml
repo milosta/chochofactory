@@ -8,6 +8,7 @@
     tools:context="com.example.milos.chocolatefactory.GameActivity">
 
     <LinearLayout
+        android:id="@+id/infobar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -46,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/navigation"
+        android:layout_below="@+id/infobar"
         android:animateLayoutChanges="true">
 
     </FrameLayout>

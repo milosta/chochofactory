@@ -12,7 +12,12 @@ import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity
         implements TappingFragment.OnFragmentInteractionListener{
-
+    /**
+     * singleton
+     * getry
+     * setry synchronized
+     * thread safe
+     */
     private TextView mCountTV;
     private TextView mCpsTV;
 
