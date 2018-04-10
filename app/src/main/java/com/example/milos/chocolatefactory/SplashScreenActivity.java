@@ -8,7 +8,7 @@ import android.os.Bundle;
 public class SplashScreenActivity extends AppCompatActivity {
 
     // Splash screen timer in milliseconds
-    private static int TIME_OUT = 2000;
+    private static int TIME_OUT = 0; //1500; FIXME
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

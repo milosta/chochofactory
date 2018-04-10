@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory;
 
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,8 +22,10 @@ public class GameActivity extends AppCompatActivity
     private TextView mCountTV;
     private TextView mCpsTV;
 
-    private Integer count = 0;
-    private Integer cps = 0;
+    private Long count = 0L;
+    private Long cps = 1000L;
+
+    Handler handler = new Handler();
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -62,18 +65,30 @@ public class GameActivity extends AppCompatActivity
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, TappingFragment.newInstance());
         transaction.commit();
+
+        // start CPSing, its running in current thread, so no thread-safeness needed
+        final long DELAY = 1000; //milliseconds
+
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                count += cps;
+                prepareUi();
+
+                handler.postDelayed(this, DELAY);
+            }
+        }, DELAY);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        prepareUi();
+        prepareUi();
     }
 
-//    private void prepareUi() {
-//        mChocoCount.setText(String.valueOf(count));
-//        mCPS.setText(String.valueOf(cps));
-//    }
+    private void prepareUi() {
+        mCountTV.setText(String.valueOf(count));
+        mCpsTV.setText(String.valueOf(cps));
+    }
 
     public void chocolateClicked() {
         count ++;

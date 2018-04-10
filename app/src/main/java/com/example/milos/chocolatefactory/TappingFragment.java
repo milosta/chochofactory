@@ -55,11 +55,6 @@ public class TappingFragment extends Fragment{
         return view;
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        ((OnFragmentInteractionListener) activity).chocolateClicked();
-//    }
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -71,11 +66,3 @@ public class TappingFragment extends Fragment{
     }
 
 }
-
-//        mChocolateButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                count ++;
-//                mChocoCount.setText(String.valueOf(count));
-//            }
-//        });
