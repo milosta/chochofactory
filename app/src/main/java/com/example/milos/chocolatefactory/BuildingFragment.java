@@ -28,7 +28,6 @@ public class BuildingFragment extends Fragment {
 
     private OnListFragmentInteractionListener mListener;
 
-    // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
     public static BuildingFragment newInstance() {
         BuildingFragment fragment = new BuildingFragment();

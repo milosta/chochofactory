@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.milos.chocolatefactory.model.dataStorage;
+
 public class GameActivity extends AppCompatActivity
         implements TappingFragment.OnFragmentInteractionListener{
     /**
@@ -20,9 +22,7 @@ public class GameActivity extends AppCompatActivity
      */
     private TextView mCountTV;
     private TextView mCpsTV;
-
-    private Long count = 0L;
-    private Long cps = 1000L;
+    private dataStorage mDS = dataStorage.getInstance();
 
     Handler handler = new Handler();
 
@@ -37,7 +37,7 @@ public class GameActivity extends AppCompatActivity
                     selectedFragment = TappingFragment.newInstance();
                     break;
                 case R.id.navigation_building:
-                    selectedFragment = BuildingFragmentOld.newInstance();
+                    selectedFragment = BuildingFragment.newInstance();
                     break;
                 case R.id.navigation_upgrade:
                     selectedFragment = UpgradeFragment.newInstance();
@@ -70,8 +70,8 @@ public class GameActivity extends AppCompatActivity
 
         handler.postDelayed(new Runnable() {
             public void run() {
-                count += cps;
-                prepareUi();
+                mDS.oneSec();
+                updateUi();
 
                 handler.postDelayed(this, DELAY);
             }
@@ -81,17 +81,17 @@ public class GameActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        prepareUi();
+        updateUi();
     }
 
-    private void prepareUi() {
-        mCountTV.setText(String.valueOf(count));
-        mCpsTV.setText(String.valueOf(cps));
+    private void updateUi() {
+        mCountTV.setText(String.valueOf(mDS.getCount()));
+        mCpsTV.setText(String.valueOf(mDS.getCps()));
     }
 
     public void chocolateClicked() {
-        count ++;
-        mCountTV.setText(String.valueOf(count));
+        mDS.click();
+        updateUi();
     }
 
 }
