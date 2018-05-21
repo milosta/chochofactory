@@ -1,9 +1,11 @@
-package com.example.milos.chocolatefactory;
+package com.example.milos.chocolatefactory.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.milos.chocolatefactory.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.milos.chocolatefactory.dummy;
+package com.example.milos.chocolatefactory.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

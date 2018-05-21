@@ -1,5 +1,6 @@
-package com.example.milos.chocolatefactory;
+package com.example.milos.chocolatefactory.activities;
 
+import android.app.ActionBar;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -8,12 +9,20 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
+import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.model.DummyContent;
+import com.example.milos.chocolatefactory.fragments.BuildingFragment;
+import com.example.milos.chocolatefactory.fragments.TappingFragment;
+import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
 import com.example.milos.chocolatefactory.model.dataStorage;
 
-public class GameActivity extends AppCompatActivity
-        implements TappingFragment.OnFragmentInteractionListener{
+public class GameActivity
+        extends AppCompatActivity
+        implements TappingFragment.OnFragmentInteractionListener,
+                   BuildingFragment.OnListFragmentInteractionListener{
     /**
      * singleton
      * getry
@@ -81,7 +90,19 @@ public class GameActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
+        hide_satus_bar();
         updateUi();
+    }
+
+    private void hide_satus_bar() {
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null)
+            actionBar.hide();
     }
 
     private void updateUi() {
@@ -89,9 +110,18 @@ public class GameActivity extends AppCompatActivity
         mCpsTV.setText(String.valueOf(mDS.getCps()));
     }
 
+    /*****************************************************************
+    interations listeners
+    *****************************************************************/
+
     public void chocolateClicked() {
         mDS.click();
         updateUi();
     }
 
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+        ;
+        chocolateClicked();
+        updateUi();
+    }
 }

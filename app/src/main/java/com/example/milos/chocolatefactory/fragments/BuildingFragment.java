@@ -1,4 +1,4 @@
-package com.example.milos.chocolatefactory;
+package com.example.milos.chocolatefactory.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.milos.chocolatefactory.dummy.DummyContent;
-import com.example.milos.chocolatefactory.dummy.DummyContent.DummyItem;
-
-import java.util.List;
+import com.example.milos.chocolatefactory.MyBuildingAdapter;
+import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.model.DummyContent;
+import com.example.milos.chocolatefactory.model.DummyContent.DummyItem;
 
 /**
  * A fragment representing a list of Items.
@@ -23,7 +23,6 @@ import java.util.List;
  */
 public class BuildingFragment extends Fragment {
 
-    private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
 
     private OnListFragmentInteractionListener mListener;
@@ -42,9 +41,9 @@ public class BuildingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_building_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_building, container, false);
 
-        // Set the adapter
+        // Set layout manager and the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
@@ -53,7 +52,8 @@ public class BuildingFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyBuildingRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            // set the adapter
+            recyclerView.setAdapter(new MyBuildingAdapter(DummyContent.ITEMS, mListener));
         }
         return view;
     }

@@ -1,4 +1,4 @@
-package com.example.milos.chocolatefactory;
+package com.example.milos.chocolatefactory.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.TextView;
+
+import com.example.milos.chocolatefactory.R;
 
 
 /**
