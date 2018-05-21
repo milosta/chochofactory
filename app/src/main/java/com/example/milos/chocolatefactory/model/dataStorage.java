@@ -8,6 +8,7 @@ public class dataStorage {
     private static final dataStorage ourInstance = new dataStorage();
     private Long count = 0L;
     private Long cps = 1000L;
+    private Long click_val = 1L;
 
     public Long getCount() {
 
@@ -37,6 +38,6 @@ public class dataStorage {
         count += cps;
     }
     public void click() {
-        count += 1;
+        count += click_val;
     }
 }
