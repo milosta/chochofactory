@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -32,28 +33,33 @@
                 android:text="name" />
 
             <TextView
-                android:id="@+id/costText"
+                android:id="@+id/countText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="cost: " />
+                android:text="count:" />
 
             <TextView
                 android:id="@+id/cost"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="cost-val" />
+                android:text="count-val" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/currency" />
+
             <TextView
                 android:id="@+id/count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="count" />
+                android:text="cost" />
 
             <TextView
                 android:id="@+id/cpsText"
