@@ -17,64 +17,86 @@
         tools:ignore="ContentDescription"
         />
 
-    <TableLayout
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tableLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="name" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="name"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/countText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/countText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="count:" />
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:text="count: "
+            app:layout_constraintBottom_toTopOf="@+id/cpsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/cost"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="count-val" />
-        </TableRow>
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="count-val"
+            app:layout_constraintBottom_toTopOf="@+id/cps"
+            app:layout_constraintStart_toEndOf="@+id/countText"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/currency" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/count"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:srcCompat="@drawable/currency" />
 
-            <TextView
-                android:id="@+id/count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="cost" />
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:text="cost"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cpsText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
-            <TextView
-                android:id="@+id/cpsText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="cps: " />
+        <TextView
+            android:id="@+id/cpsText"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:text="CPS: "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countText" />
 
-            <TextView
-                android:id="@+id/cps"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="cps-val" />
-        </TableRow>
+        <TextView
+            android:id="@+id/cps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cps-val"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cpsText"
+            app:layout_constraintTop_toBottomOf="@+id/cost" />
 
-    </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </LinearLayout>
