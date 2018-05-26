@@ -11,7 +11,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/buildingIcon"
+        android:id="@+id/icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         tools:ignore="ContentDescription"

@@ -4,12 +4,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.fragments.BuildingFragment.OnListFragmentInteractionListener;
 import com.example.milos.chocolatefactory.model.Building;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link Building} and makes a call to the
@@ -17,7 +20,9 @@ import java.util.List;
  * TODO: Replace the implementation with code for your data type.
  */
 public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHolder> {
-
+    private static final int[] icons = {
+            R.drawable.building_cursor,
+    };
     private final List<Building> buildingList;
 //    private final OnListFragmentInteractionListener mListener;
 
@@ -46,6 +51,13 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         holder.mCountView.setText(String.valueOf(building.count));
         holder.mCostView.setText(String.valueOf(building.cost));
         holder.mCPSView.setText(String.valueOf(building.cps));
+        int imageId;
+        try {
+            imageId = icons[position];
+        } catch (IndexOutOfBoundsException ex) {
+            imageId = R.drawable.ic_placeholder;
+        }
+        holder.mImageView.setImageResource(imageId);
 
 //        holder.mView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -69,6 +81,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
     // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
 //        public final View mView;
+        public ImageView mImageView;
         public TextView mNameView;
         public TextView mCountView;
         public TextView mCostView;
@@ -77,6 +90,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         public ViewHolder(View view) {
             super(view);
 //            mView = view;
+            mImageView = (ImageView) view.findViewById(R.id.icon);
             mNameView = (TextView) view.findViewById(R.id.name);
             mCountView = (TextView) view.findViewById(R.id.count);
             mCostView = (TextView) view.findViewById(R.id.cost);
