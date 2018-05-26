@@ -67,7 +67,7 @@ public class BuildingFragment extends Fragment {
     }
 
     public void getDummyData() {
-        for (Long i = 0L; i < 10; i++) {
+        for (Long i = 0L; i < 25; i++) {
             Building building = new Building(String.valueOf(i), i, i, i);
             buildingList.add(building);
         }
