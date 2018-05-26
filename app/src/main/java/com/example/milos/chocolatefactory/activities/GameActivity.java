@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.R;
-import com.example.milos.chocolatefactory.model.DummyContent;
 import com.example.milos.chocolatefactory.fragments.BuildingFragment;
 import com.example.milos.chocolatefactory.fragments.TappingFragment;
 import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
@@ -21,8 +20,7 @@ import com.example.milos.chocolatefactory.model.dataStorage;
 
 public class GameActivity
         extends AppCompatActivity
-        implements TappingFragment.OnFragmentInteractionListener,
-                   BuildingFragment.OnListFragmentInteractionListener{
+        implements TappingFragment.OnFragmentInteractionListener {
     /**
      * singleton
      * getry
@@ -74,6 +72,8 @@ public class GameActivity
         transaction.replace(R.id.frame_layout, TappingFragment.newInstance());
         transaction.commit();
 
+        mDS.init(getApplicationContext());
+
         // start CPSing, its running in current thread, so no thread-safeness needed
         final long DELAY = 1000; //milliseconds
 
@@ -119,9 +119,9 @@ public class GameActivity
         updateUi();
     }
 
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
-        ;
-        chocolateClicked();
-        updateUi();
-    }
+//    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+//        ;
+//        chocolateClicked();
+//        updateUi();
+//    }
 }
