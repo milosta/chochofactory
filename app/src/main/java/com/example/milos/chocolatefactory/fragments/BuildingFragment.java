@@ -4,17 +4,20 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.milos.chocolatefactory.MyBuildingAdapter;
+import com.example.milos.chocolatefactory.BuildingAdapter;
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.model.Building;
 import com.example.milos.chocolatefactory.model.DummyContent;
 import com.example.milos.chocolatefactory.model.DummyContent.DummyItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A fragment representing a list of Items.
@@ -24,9 +27,10 @@ import com.example.milos.chocolatefactory.model.DummyContent.DummyItem;
  */
 public class BuildingFragment extends Fragment {
 
-    private int mColumnCount = 1;
-
-    private OnListFragmentInteractionListener mListener;
+//    private OnListFragmentInteractionListener mListener;
+    private List<Building> buildingList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private BuildingAdapter mAdapter;
 
     @SuppressWarnings("unused")
     public static BuildingFragment newInstance() {
@@ -48,37 +52,43 @@ public class BuildingFragment extends Fragment {
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
+            recyclerView.setLayoutManager(new LinearLayoutManager(context));
             // set the adapter
-            recyclerView.setAdapter(new MyBuildingAdapter(DummyContent.ITEMS, mListener));
+//            recyclerView.setAdapter(new BuildingAdapter(DummyContent.ITEMS, mListener));
+            mAdapter = new BuildingAdapter(buildingList);
+            recyclerView.setAdapter(mAdapter);
 
             //set separator
             recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
+        getDummyData();
+        mAdapter.notifyDataSetChanged();
         return view;
     }
 
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
-            mListener = (OnListFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnListFragmentInteractionListener");
+    public void getDummyData() {
+        for (Long i = 0L; i < 10; i++) {
+            Building building = new Building(String.valueOf(i), i, i, i);
+            buildingList.add(building);
         }
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        if (context instanceof OnListFragmentInteractionListener) {
+//            mListener = (OnListFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnListFragmentInteractionListener");
+//        }
+//    }
+//
+//    @Override
+//    public void onDetach() {
+//        super.onDetach();
+//        mListener = null;
+//    }
 
     /**
      * This interface must be implemented by activities that contain this
