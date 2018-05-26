@@ -3,6 +3,7 @@ package com.example.milos.chocolatefactory.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -54,6 +55,9 @@ public class BuildingFragment extends Fragment {
             }
             // set the adapter
             recyclerView.setAdapter(new MyBuildingAdapter(DummyContent.ITEMS, mListener));
+
+            //set separator
+            recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
         return view;
     }
