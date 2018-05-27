@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.milos.chocolatefactory.fragments.BuildingFragment.OnListFragmentInteractionListener;
 import com.example.milos.chocolatefactory.model.Building;
 
 import java.util.HashMap;

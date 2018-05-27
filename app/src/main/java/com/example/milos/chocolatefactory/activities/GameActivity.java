@@ -94,6 +94,12 @@ public class GameActivity
         updateUi();
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mDS.writeAll();
+    }
+
     private void hide_satus_bar() {
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
