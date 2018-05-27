@@ -16,7 +16,7 @@ import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.fragments.BuildingFragment;
 import com.example.milos.chocolatefactory.fragments.TappingFragment;
 import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
-import com.example.milos.chocolatefactory.model.dataStorage;
+import com.example.milos.chocolatefactory.model.DataStorage;
 
 public class GameActivity
         extends AppCompatActivity
@@ -29,7 +29,7 @@ public class GameActivity
      */
     private TextView mCountTV;
     private TextView mCpsTV;
-    private dataStorage mDS = dataStorage.getInstance();
+    private DataStorage mDS = DataStorage.getInstance();
 
     Handler handler = new Handler();
 
@@ -62,6 +62,8 @@ public class GameActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        mDS.init(getApplicationContext());
+
         mCountTV = (TextView) findViewById(R.id.choco_count);
         mCpsTV = (TextView) findViewById(R.id.CPS);
 
@@ -71,8 +73,6 @@ public class GameActivity
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, TappingFragment.newInstance());
         transaction.commit();
-
-        mDS.init(getApplicationContext());
 
         // start CPSing, its running in current thread, so no thread-safeness needed
         final long DELAY = 1000; //milliseconds
@@ -97,7 +97,7 @@ public class GameActivity
     @Override
     protected void onPause() {
         super.onPause();
-        mDS.writeAll();
+        mDS.saveData();
     }
 
     private void hide_satus_bar() {

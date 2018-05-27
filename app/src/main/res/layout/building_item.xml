@@ -45,7 +45,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/cost"
+            android:id="@+id/count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="count-val"
@@ -59,14 +59,14 @@
             android:layout_width="18dp"
             android:layout_height="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/count"
+            app:layout_constraintEnd_toStartOf="@+id/cost"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name"
             app:srcCompat="@drawable/currency" />
 
         <TextView
-            android:id="@+id/count"
+            android:id="@+id/cost"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:text="cost"
@@ -93,7 +93,7 @@
             android:text="cps-val"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cpsText"
-            app:layout_constraintTop_toBottomOf="@+id/cost" />
+            app:layout_constraintTop_toBottomOf="@+id/count" />
 
 
     </android.support.constraint.ConstraintLayout>

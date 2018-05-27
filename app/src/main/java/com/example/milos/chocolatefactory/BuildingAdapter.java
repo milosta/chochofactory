@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.model.Building;
+import com.example.milos.chocolatefactory.model.DefaultValues;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,9 +20,7 @@ import java.util.Map;
  * TODO: Replace the implementation with code for your data type.
  */
 public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHolder> {
-    private static final int[] icons = {
-            R.drawable.building_cursor,
-    };
+    private static final int[] icons = DefaultValues.buildingIcons;
     private final List<Building> buildingList;
 //    private final OnListFragmentInteractionListener mListener;
 

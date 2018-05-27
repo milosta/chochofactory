@@ -13,21 +13,19 @@ import android.view.ViewGroup;
 import com.example.milos.chocolatefactory.BuildingAdapter;
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.model.Building;
+import com.example.milos.chocolatefactory.model.DataStorage;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A fragment representing a list of Items.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
- * interface.
  */
 public class BuildingFragment extends Fragment {
 
 //    private OnListFragmentInteractionListener mListener;
+    private DataStorage mDS = DataStorage.getInstance();
     private List<Building> buildingList = new ArrayList<>();
-    private RecyclerView recyclerView;
     private BuildingAdapter mAdapter;
 
     @SuppressWarnings("unused")
@@ -53,22 +51,15 @@ public class BuildingFragment extends Fragment {
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
             // set the adapter
 //            recyclerView.setAdapter(new BuildingAdapter(DummyContent.ITEMS, mListener));
+            buildingList = mDS.getBuildingList();
             mAdapter = new BuildingAdapter(buildingList);
             recyclerView.setAdapter(mAdapter);
 
             //set separator
             recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
-        getDummyData();
-        mAdapter.notifyDataSetChanged();
+//        mAdapter.notifyDataSetChanged();
         return view;
-    }
-
-    public void getDummyData() {
-        for (Long i = 0L; i < 25; i++) {
-            Building building = new Building(String.valueOf(i), i, i, i);
-            buildingList.add(building);
-        }
     }
 
 //    @Override
