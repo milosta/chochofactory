@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory.fragments;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.milos.chocolatefactory.BuildingAdapter;
 import com.example.milos.chocolatefactory.R;
@@ -21,12 +23,15 @@ import java.util.List;
 /**
  * A fragment representing a list of Items.
  */
-public class BuildingFragment extends Fragment {
+public class BuildingFragment
+        extends Fragment
+        implements BuildingAdapter.OnListFragmentInteractionListener {
 
-//    private OnListFragmentInteractionListener mListener;
     private DataStorage mDS = DataStorage.getInstance();
-    private List<Building> buildingList = new ArrayList<>();
+    private Activity mActivity = getActivity();
+    private List<Building> mBuildings = new ArrayList<>();
     private BuildingAdapter mAdapter;
+    private RecyclerView mRecyclerView;
 
     @SuppressWarnings("unused")
     public static BuildingFragment newInstance() {
@@ -47,50 +52,28 @@ public class BuildingFragment extends Fragment {
         // Set layout manager and the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            // set the adapter
-//            recyclerView.setAdapter(new BuildingAdapter(DummyContent.ITEMS, mListener));
-            buildingList = mDS.getBuildingList();
-            mAdapter = new BuildingAdapter(buildingList);
-            recyclerView.setAdapter(mAdapter);
+            mRecyclerView = (RecyclerView) view;
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+            mBuildings = mDS.getBuildingList();
+            mAdapter = new BuildingAdapter(mBuildings,
+                                        (BuildingAdapter.OnListFragmentInteractionListener) this);
+            mRecyclerView.setAdapter(mAdapter);
 
             //set separator
-            recyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
+            mRecyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
 //        mAdapter.notifyDataSetChanged();
         return view;
     }
 
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnListFragmentInteractionListener) {
-//            mListener = (OnListFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnListFragmentInteractionListener");
-//        }
-//    }
-//
-//    @Override
-//    public void onDetach() {
-//        super.onDetach();
-//        mListener = null;
-//    }
-
-//    /**
-//     * This interface must be implemented by activities that contain this
-//     * fragment to allow an interaction in this fragment to be communicated
-//     * to the activity and potentially other fragments contained in that
-//     * activity.
-//     * <p/>
-//     * See the Android Training lesson <a href=
-//     * "http://developer.android.com/training/basics/fragments/communicating.html"
-//     * >Communicating with Other Fragments</a> for more information.
-//     */
-//    public interface OnListFragmentInteractionListener {
-//        // TODO: Update argument type and name
-//        void onListFragmentInteraction(DummyItem item);
-//    }
+    public void onClick(View view) {
+        int position = mRecyclerView.getChildPosition(view);
+        Building building = mBuildings.get(position);
+        if (mDS.getCount() < building.cost) {
+            String msg = "Not enough chocolate!";
+            Toast.makeText(mActivity.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
+        else
+            Toast.makeText(mActivity.getApplicationContext(), "True", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -20,14 +20,12 @@ import java.util.Map;
  * TODO: Replace the implementation with code for your data type.
  */
 public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHolder> {
-    private static final int[] icons = DefaultValues.buildingIcons;
     private final List<Building> buildingList;
-//    private final OnListFragmentInteractionListener mListener;
+    private final OnListFragmentInteractionListener mListener;
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public BuildingAdapter(List<Building> items/*, OnListFragmentInteractionListener listener*/) {
+    public BuildingAdapter(List<Building> items, OnListFragmentInteractionListener listener) {
         buildingList = items;
-//        mListener = listener;
+        mListener = listener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -51,22 +49,22 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         holder.mCPSView.setText(String.valueOf(building.cps));
         int imageId;
         try {
-            imageId = icons[position];
+            imageId = DefaultValues.buildingIcons[position];
         } catch (IndexOutOfBoundsException ex) {
             imageId = R.drawable.ic_placeholder;
         }
         holder.mImageView.setImageResource(imageId);
 
-//        holder.mView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (null != mListener) {
-//                    // Notify the active callbacks interface (the activity, if the
-//                    // fragment is attached to one) that an item has been selected.
-//                    mListener.onListFragmentInteraction(holder.mItem);
-//                }
-//            }
-//        });
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (null != mListener) {
+                    // Notify the active callbacks interface (the activity, if the
+                    // fragment is attached to one) that an item has been selected.
+                    mListener.onClick(holder.mView);
+                }
+            }
+        });
     }
 
     @Override
@@ -78,7 +76,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     public class ViewHolder extends RecyclerView.ViewHolder {
-//        public final View mView;
+        public View mView;
         public ImageView mImageView;
         public TextView mNameView;
         public TextView mCountView;
@@ -87,12 +85,16 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
 
         public ViewHolder(View view) {
             super(view);
-//            mView = view;
+            mView = view;
             mImageView = (ImageView) view.findViewById(R.id.icon);
             mNameView = (TextView) view.findViewById(R.id.name);
             mCountView = (TextView) view.findViewById(R.id.count);
             mCostView = (TextView) view.findViewById(R.id.cost);
             mCPSView = (TextView) view.findViewById(R.id.cps);
         }
+    }
+
+    public interface OnListFragmentInteractionListener {
+        void onClick(View view);
     }
 }
