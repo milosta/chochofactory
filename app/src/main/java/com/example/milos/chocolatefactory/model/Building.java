@@ -5,10 +5,10 @@ package com.example.milos.chocolatefactory.model;
  */
 
 public class Building {
-    public final String name;
-    public final Long cost;
-    public final Long count;
-    public final Long cps;
+    private String name;
+    private Long cost;
+    private Long count;
+    private Long cps;
 
     public Building(String name, Long cost, Long count, Long cps) {
         this.name = name;
@@ -17,8 +17,24 @@ public class Building {
         this.cps = cps;
     }
 
-    @Override
-    public String toString() {
+    public void upgrade() {
+        cost = (long) (cost * DefaultValues.multiplier);
+        count ++;
+    }
+
+    public String getName() {
         return name;
+    }
+
+    public Long getCost() {
+        return cost;
+    }
+
+    public Long getCount() {
+        return count;
+    }
+
+    public Long getCps() {
+        return cps;
     }
 }

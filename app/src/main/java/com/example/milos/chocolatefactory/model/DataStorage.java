@@ -55,21 +55,28 @@ public class DataStorage {
     public Long getCount() {
         return count;
     }
+    public void setCount(Long count) {
+        this.count = count;
+    }
+    public boolean decreaseCount(Long count) {
+        if (this.count < count)
+            return false;
+        this.count -= count;
+        return true;
+    }
 
     public Long getCps() {
         return cps;
     }
+    public void setCps(Long count) {
+        this.cps = cps;
+    }
+    public void increaseCps(Long count) {
+        cps += count;
+    }
 
     public List<Building> getBuildingList() {
         return buildingList;
-    }
-
-    public void setCount(Long count) {
-        this.count = count;
-    }
-
-    public void setCps(Long count) {
-        this.cps = cps;
     }
 
     public void oneSec() {

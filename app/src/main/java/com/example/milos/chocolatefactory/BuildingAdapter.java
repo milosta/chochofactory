@@ -43,10 +43,10 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         Building building = buildingList.get(position);
-        holder.mNameView.setText(building.name);
-        holder.mCountView.setText(String.valueOf(building.count));
-        holder.mCostView.setText(String.valueOf(building.cost));
-        holder.mCPSView.setText(String.valueOf(building.cps));
+        holder.mNameView.setText(building.getName());
+        holder.mCountView.setText(String.valueOf(building.getCount()));
+        holder.mCostView.setText(String.valueOf(building.getCost()));
+        holder.mCPSView.setText(String.valueOf(building.getCps()));
         int imageId;
         try {
             imageId = DefaultValues.buildingIcons[position];

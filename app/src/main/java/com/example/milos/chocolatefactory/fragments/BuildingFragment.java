@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.milos.chocolatefactory.BuildingAdapter;
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.activities.GameActivity;
 import com.example.milos.chocolatefactory.model.Building;
 import com.example.milos.chocolatefactory.model.DataStorage;
 
@@ -28,7 +29,6 @@ public class BuildingFragment
         implements BuildingAdapter.OnListFragmentInteractionListener {
 
     private DataStorage mDS = DataStorage.getInstance();
-    private Activity mActivity = getActivity();
     private List<Building> mBuildings = new ArrayList<>();
     private BuildingAdapter mAdapter;
     private RecyclerView mRecyclerView;
@@ -67,13 +67,19 @@ public class BuildingFragment
     }
 
     public void onClick(View view) {
-        int position = mRecyclerView.getChildPosition(view);
+        int position = mRecyclerView.getChildAdapterPosition(view);
         Building building = mBuildings.get(position);
-        if (mDS.getCount() < building.cost) {
+
+        if (!mDS.decreaseCount(building.getCost())) {
             String msg = "Not enough chocolate!";
-            Toast.makeText(mActivity.getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+            return;
         }
-        else
-            Toast.makeText(mActivity.getApplicationContext(), "True", Toast.LENGTH_SHORT).show();
+        building.upgrade();
+        mAdapter.notifyItemChanged(position);
+        mDS.increaseCps(building.getCps());
+
+        GameActivity activity = (GameActivity) getActivity();
+        activity.updateUi();
     }
 }

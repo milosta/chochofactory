@@ -111,7 +111,7 @@ public class GameActivity
             actionBar.hide();
     }
 
-    private void updateUi() {
+    public void updateUi() {
         mCountTV.setText(String.valueOf(mDS.getCount()));
         mCpsTV.setText(String.valueOf(mDS.getCps()));
     }

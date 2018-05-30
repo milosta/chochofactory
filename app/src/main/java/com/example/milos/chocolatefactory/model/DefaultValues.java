@@ -32,15 +32,15 @@ public class DefaultValues {
             "  },\n" +
             "  {\n" +
             "    \"name\": \"cursor2\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"cost\": 194,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 3\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"cursor3\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"cost\": 954,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 10\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"cursor4\",\n" +
