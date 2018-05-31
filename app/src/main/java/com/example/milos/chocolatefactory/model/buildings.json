@@ -1,74 +1,74 @@
 [
   {
-    "name": "cursor",
+    "name": "Cursor",
     "cost": 27,
     "count": 0,
     "cps": 1
   },
   {
-    "name": "cursor2",
-    "cost": 27,
+    "name": "Grandma",
+    "cost": 174,
     "count": 0,
-    "cps": 1
+    "cps": 3
   },
   {
-    "name": "cursor3",
-    "cost": 27,
+    "name": "Confectioner",
+    "cost": 941,
     "count": 0,
-    "cps": 1
+    "cps": 10
   },
   {
-    "name": "cursor4",
-    "cost": 27,
+    "name": "Plantation",
+    "cost": 4701,
     "count": 0,
-    "cps": 1
+    "cps": 37
   },
   {
-    "name": "cursor5",
-    "cost": 27,
+    "name": "Mine",
+    "cost": 22423,
     "count": 0,
-    "cps": 1
+    "cps": 119
   },
   {
-    "name": "cursor6",
-    "cost": 27,
+    "name": "Factory",
+    "cost": 74925,
     "count": 0,
-    "cps": 1
+    "cps": 499
   },
   {
-    "name": "cursor7",
-    "cost": 27,
+    "name": "Wizard",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   },
   {
-    "name": "cursor8",
-    "cost": 27,
+    "name": "Temple",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   },
   {
-    "name": "cursor9",
-    "cost": 27,
+    "name": "Alchemy lab",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   },
   {
-    "name": "cursor10",
-    "cost": 27,
+    "name": "Hadron collider",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   },
   {
-    "name": "cursor11",
-    "cost": 27,
+    "name": "Portal",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   },
   {
-    "name": "cursor12",
-    "cost": 27,
+    "name": "Time machine",
+    "cost": 0,
     "count": 0,
-    "cps": 1
+    "cps": 0
   }
 ]

@@ -25,76 +25,76 @@ public class DefaultValues {
 
     public static final String buildingList = "[\n" +
             "  {\n" +
-            "    \"name\": \"cursor\",\n" +
+            "    \"name\": \"Cursor\",\n" +
             "    \"cost\": 27,\n" +
             "    \"count\": 0,\n" +
             "    \"cps\": 1\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor2\",\n" +
-            "    \"cost\": 194,\n" +
+            "    \"name\": \"Grandma\",\n" +
+            "    \"cost\": 174,\n" +
             "    \"count\": 0,\n" +
             "    \"cps\": 3\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor3\",\n" +
-            "    \"cost\": 954,\n" +
+            "    \"name\": \"Confectioner\",\n" +
+            "    \"cost\": 941,\n" +
             "    \"count\": 0,\n" +
             "    \"cps\": 10\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor4\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Plantation\",\n" +
+            "    \"cost\": 4701,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 37\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor5\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Mine\",\n" +
+            "    \"cost\": 22423,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 119\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor6\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Factory\",\n" +
+            "    \"cost\": 74925,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 499\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor7\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Wizard\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor8\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Temple\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor9\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Alchemy lab\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor10\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Hadron collider\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor11\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Portal\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"cursor12\",\n" +
-            "    \"cost\": 27,\n" +
+            "    \"name\": \"Time machine\",\n" +
+            "    \"cost\": 0,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 1\n" +
+            "    \"cps\": 0\n" +
             "  }\n" +
             "]";
 
