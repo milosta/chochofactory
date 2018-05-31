@@ -32,6 +32,7 @@ public class GameActivity
     private DataStorage mDS = DataStorage.getInstance();
 
     Handler handler = new Handler();
+    Runnable runnable;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -77,14 +78,15 @@ public class GameActivity
         // start CPSing, its running in current thread, so no thread-safeness needed
         final long DELAY = 1000; //milliseconds
 
-        handler.postDelayed(new Runnable() {
+        runnable = new Runnable() {
             public void run() {
                 mDS.oneSec();
                 updateUi();
 
                 handler.postDelayed(this, DELAY);
             }
-        }, DELAY);
+        };
+        handler.postDelayed(runnable, DELAY);
     }
 
     @Override
@@ -98,6 +100,12 @@ public class GameActivity
     protected void onPause() {
         super.onPause();
         mDS.saveData();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacks(runnable);
     }
 
     private void hide_satus_bar() {
