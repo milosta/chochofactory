@@ -36,12 +36,16 @@
 
     <ImageButton
         android:id="@+id/chocolateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/chocolateButtonDesc"
+        android:scaleType="centerInside"
         android:src="@drawable/chocolate_bar"
-        android:contentDescription="@string/chocolateButtonDesc" />
+        android:background="?android:selectableItemBackground"
+        />
 
     <TextView
         android:id="@+id/message"

@@ -21,6 +21,8 @@ public class DefaultValues {
 
     public static final int[] buildingIcons = {
             R.drawable.building_cursor,
+            R.drawable.building_grandma,
+            R.drawable.building_confectioner,
     };
 
     public static final String buildingList = "[\n" +
