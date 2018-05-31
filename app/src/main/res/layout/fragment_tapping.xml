@@ -2,37 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.milos.chocolatefactory.fragments.BlankFragment">
-
-
-    <!--<ImageButton-->
-        <!--android:id="@+id/chocolateButton"-->
-        <!--android:layout_width="300dp"-->
-        <!--android:layout_height="300dp"-->
-        <!--app:srcCompat="@drawable/chocolate_bar"-->
-        <!--android:scaleType="fitXY"-->
-
-        <!--app:layout_constraintBottom_toTopOf="@+id/navigation"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/message"-->
-        <!--app:layout_constraintVertical_bias="0.322" />-->
-
-    <!--<ImageView-->
-        <!--android:id="@+id/truiton_image"-->
-        <!--android:layout_width="300dp"-->
-        <!--android:layout_height="300dp"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:src="@mipmap/truiton"/>-->
-
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/truiton_image"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:text="Fragment 1"-->
-        <!--android:textSize="30sp"/>-->
 
     <ImageButton
         android:id="@+id/chocolateButton"

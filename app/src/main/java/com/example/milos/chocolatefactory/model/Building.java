@@ -18,7 +18,7 @@ public class Building {
     }
 
     public void upgrade() {
-        cost = (long) (cost * DefaultValues.multiplier);
+        cost = (long) (cost * DefaultValues.buildingCostMultiplier);
         count ++;
     }
 

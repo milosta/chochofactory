@@ -17,7 +17,7 @@ public class DefaultValues {
     public static final Long cps = 1L;
     public static final Long clickVal = 10L;
 
-    public static final double multiplier = 1.3;
+    public static final double buildingCostMultiplier = 1.2;
 
     public static final int[] buildingIcons = {
             R.drawable.building_cursor,
