@@ -34,6 +34,7 @@ public class BuildingFragment
     private List<Building> mBuildings = new ArrayList<>();
     private BuildingAdapter mAdapter;
     private RecyclerView mRecyclerView;
+    private Toast mToast;
 
     /**
      * Use this factory method to create a new instance of
@@ -73,9 +74,16 @@ public class BuildingFragment
 
         if (!mDS.decreaseCount(building.getCost())) {
             String msg = "Not enough chocolate!";
-            Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+            if (mToast == null) {
+                mToast = Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT);
+            }
+            if (!mToast.getView().isShown()) {
+                mToast.setText(msg);
+                mToast.show();
+            }
             return;
         }
+
         building.upgrade();
         mAdapter.notifyItemChanged(position);
         mDS.increaseCps(building.getCps());
