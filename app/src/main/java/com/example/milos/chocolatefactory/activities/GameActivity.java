@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.Utils;
 import com.example.milos.chocolatefactory.fragments.BuildingFragment;
 import com.example.milos.chocolatefactory.fragments.TappingFragment;
 import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
@@ -120,8 +121,8 @@ public class GameActivity
     }
 
     public void updateUi() {
-        mCountTV.setText(String.valueOf(mDS.getCount()));
-        mCpsTV.setText(String.valueOf(mDS.getCps()));
+        mCountTV.setText(Utils.toString(mDS.getCount()));
+        mCpsTV.setText(Utils.toString(mDS.getCps()));
     }
 
     /*****************************************************************

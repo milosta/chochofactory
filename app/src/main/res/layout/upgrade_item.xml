@@ -31,8 +31,10 @@
             android:layout_marginStart="8dp"
             android:text="name"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/cpsText"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/info"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +47,7 @@
             android:layout_marginTop="8dp"
             android:text="cost-val"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/cpsText"
+            app:layout_constraintBottom_toTopOf="@+id/info"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +59,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/cpsText"
+            app:layout_constraintBottom_toTopOf="@+id/info"
             app:layout_constraintEnd_toStartOf="@+id/cost"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/currency" />
@@ -69,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Description"
-            android:textSize="16sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

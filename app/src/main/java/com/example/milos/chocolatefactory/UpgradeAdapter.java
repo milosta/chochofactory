@@ -43,8 +43,8 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
         // - replace the contents of the view with that element
         Upgrade upgrade = upgradeList.get(position);
         holder.mNameView.setText(upgrade.getName());
-        holder.mCostView.setText(String.valueOf(upgrade.getCost()));
-        holder.mInfoView.setText(String.valueOf(upgrade.getInfo()));
+        holder.mCostView.setText(Utils.toString(upgrade.getCost()));
+        holder.mInfoView.setText(upgrade.getInfo());
         int imageId;
         try {
             imageId = DefaultValues.upgradeIcons[position];
