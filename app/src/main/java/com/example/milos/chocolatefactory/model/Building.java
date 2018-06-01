@@ -22,6 +22,12 @@ public class Building {
         count ++;
     }
 
+    public Long multiplyCps(double multiplier) {
+        Long old_cps = cps;
+        cps = (long) (cps * multiplier);
+        return cps - old_cps;
+    }
+
     public String getName() {
         return name;
     }

@@ -33,15 +33,14 @@ public class BuildingFragment
     private BuildingAdapter mAdapter;
     private RecyclerView mRecyclerView;
 
-    @SuppressWarnings("unused")
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @return A new instance of fragment BuildingFragment.
+     */
     public static BuildingFragment newInstance() {
-        BuildingFragment fragment = new BuildingFragment();
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        return new BuildingFragment();
     }
 
     @Override
@@ -55,6 +54,7 @@ public class BuildingFragment
             mRecyclerView = (RecyclerView) view;
             mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
             mBuildings = mDS.getBuildingList();
+
             mAdapter = new BuildingAdapter(mBuildings,
                                         (BuildingAdapter.OnListFragmentInteractionListener) this);
             mRecyclerView.setAdapter(mAdapter);
@@ -62,7 +62,6 @@ public class BuildingFragment
             //set separator
             mRecyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
-//        mAdapter.notifyDataSetChanged();
         return view;
     }
 

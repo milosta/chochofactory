@@ -21,6 +21,7 @@ public class DataStorage {
     private Long cps;
     private Long clickVal;
     private List<Building> buildingList;
+    private List<Upgrade> upgradeList;
 
     private DataStorage() {}
 
@@ -33,7 +34,7 @@ public class DataStorage {
         loadData();
     }
 
-    public void loadData() {
+    private void loadData() {
         count = SharedPref.read("count", DefaultValues.count);
         cps = SharedPref.read("cps", DefaultValues.cps);
         clickVal = SharedPref.read("clickVal", DefaultValues.clickVal);
@@ -41,7 +42,12 @@ public class DataStorage {
         String buildingString = SharedPref.read("buildingList", DefaultValues.buildingList);
         Type collectionType = new TypeToken<ArrayList<Building>>(){}.getType();
         buildingList = gson.fromJson(buildingString, collectionType);
-        int a = 1;
+
+        String upgradeString = SharedPref.read("upgradeList", DefaultValues.upgradeList);
+        collectionType = new TypeToken<ArrayList<Upgrade>>(){}.getType();
+        upgradeList = gson.fromJson(upgradeString, collectionType);
+
+        int a = 1;  // FIXME
     }
 
     public void saveData() {
@@ -50,6 +56,7 @@ public class DataStorage {
         SharedPref.write("clickVal", clickVal);
 
         SharedPref.write("buildingList", gson.toJson(buildingList));
+        SharedPref.write("upgradeList", gson.toJson(upgradeList));
     }
 
     public Long getCount() {
@@ -78,11 +85,18 @@ public class DataStorage {
     public List<Building> getBuildingList() {
         return buildingList;
     }
+    public List<Upgrade> getUpgradeList() {
+        return upgradeList;
+    }
 
     public void oneSec() {
         count += cps;
     }
     public void click() {
         count += clickVal;
+    }
+
+    public void  multiplyClickVal(double multiplier) {
+        clickVal = (long) (clickVal * multiplier);
     }
 }

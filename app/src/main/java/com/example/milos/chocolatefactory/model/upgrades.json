@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Bigger finger",
+    "cost": 100,
+    "info": "Tapping gives double amount of chocolate!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Cursor motivator",
+    "cost": 300,
+    "info": "Cursors make double amount of chocolate!",
+    "buildingIx": 0
+  },
+  {
+    "name": "Huge finger",
+    "cost": 500,
+    "info": "Tapping gives double amount of chocolate!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Bigger finger",
+    "cost": 100,
+    "info": "Tapping gives double amount of chocolate!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Bigger finger",
+    "cost": 100,
+    "info": "Tapping gives double amount of chocolate!",
+    "buildingIx": -1
+  }
+]

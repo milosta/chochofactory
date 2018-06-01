@@ -24,6 +24,9 @@ public class DefaultValues {
             R.drawable.building_grandma,
             R.drawable.building_confectioner,
     };
+    public static final int[] upgradeIcons = {
+            R.drawable.ic_upgrade_navigation_bar,
+    };
 
     public static final String buildingList = "[\n" +
             "  {\n" +
@@ -100,7 +103,40 @@ public class DefaultValues {
             "  }\n" +
             "]";
 
-//    public static final String buildingList =  DefaultValues.readFile("buildings.json");
+    public static final String upgradeList = "[\n" +
+            "  {\n" +
+            "    \"name\": \"Bigger finger\",\n" +
+            "    \"cost\": 100,\n" +
+            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Cursor motivator\",\n" +
+            "    \"cost\": 300,\n" +
+            "    \"info\": \"Cursors make double amount of chocolate!\",\n" +
+            "    \"buildingIx\": 0\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Huge finger\",\n" +
+            "    \"cost\": 500,\n" +
+            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Bigger finger\",\n" +
+            "    \"cost\": 100,\n" +
+            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Bigger finger\",\n" +
+            "    \"cost\": 100,\n" +
+            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  }\n" +
+            "]";
+
+//    public static final String buildingList = DefaultValues.readFile("buildings.json");
 
     private static String readFile(String path) {
         try {
