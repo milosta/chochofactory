@@ -10,7 +10,7 @@ import com.example.milos.chocolatefactory.R;
 public class SplashScreenActivity extends AppCompatActivity {
 
     // Splash screen timer in milliseconds
-    private static final int TIME_OUT = 0; //1500; FIXME
+    private static final int TIME_OUT = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

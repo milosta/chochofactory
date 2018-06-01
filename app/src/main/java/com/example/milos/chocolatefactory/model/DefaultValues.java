@@ -17,7 +17,7 @@ public class DefaultValues {
     public static final Long cps = 0L;
     public static final Long clickVal = 1L;
 
-    public static final double buildingCostMultiplier = 1.2;
+    public static final double buildingCostMultiplier = 1.18;
 
     public static final int[] buildingIcons = {
             R.drawable.building_cursor,
@@ -107,32 +107,74 @@ public class DefaultValues {
             "  {\n" +
             "    \"name\": \"Bigger finger\",\n" +
             "    \"cost\": 100,\n" +
-            "    \"info\": \"Tapping gives double amount of choct of choct of choct of chocolate!\",\n" +
+            "    \"info\": \"Tapping gives triple amount of chocolate!\",\n" +
             "    \"buildingIx\": -1\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Cursor motivator\",\n" +
             "    \"cost\": 300,\n" +
-            "    \"info\": \"Cursors make double amount of chocolate!\",\n" +
+            "    \"info\": \"Motivated cursors work twice as hard!\",\n" +
             "    \"buildingIx\": 0\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Huge finger\",\n" +
             "    \"cost\": 500,\n" +
-            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"info\": \"Huge fingers give triple amount of chocolate!\",\n" +
             "    \"buildingIx\": -1\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"Bigger finger\",\n" +
-            "    \"cost\": 100,\n" +
-            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"name\": \"Send flowers to grandma\",\n" +
+            "    \"cost\": 1000,\n" +
+            "    \"info\": \"Happy grandmas make double amount of chocolate!\",\n" +
+            "    \"buildingIx\": 1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Swift fingers\",\n" +
+            "    \"cost\": 1500,\n" +
+            "    \"info\": \"So much skill! Much wow! Triple amount of chocolate per tap!\",\n" +
             "    \"buildingIx\": -1\n" +
             "  },\n" +
             "  {\n" +
-            "    \"name\": \"Bigger finger\",\n" +
-            "    \"cost\": 100,\n" +
-            "    \"info\": \"Tapping gives double amount of chocolate!\",\n" +
+            "    \"name\": \"Certified confectioners\",\n" +
+            "    \"cost\": 3000,\n" +
+            "    \"info\": \"Confectioners work with twice efficiency!\",\n" +
+            "    \"buildingIx\": 2\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Cursors modernization\",\n" +
+            "    \"cost\": 5000,\n" +
+            "    \"info\": \"Modernize cursors to double their production!\",\n" +
+            "    \"buildingIx\": 1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Make taps great again!\",\n" +
+            "    \"cost\": 7500,\n" +
+            "    \"info\": \"Your screen is screaming when tapping returns with tripple efiency!\",\n" +
             "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"How about a tap?\",\n" +
+            "    \"cost\": 12000,\n" +
+            "    \"info\": \"Still no carpal tunnel \\nsyndrome? Taps x3!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Genetically modified cocoa beans\",\n" +
+            "    \"cost\": 15000,\n" +
+            "    \"info\": \"Plantation production doubles!\",\n" +
+            "    \"buildingIx\": -1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Happy grandmas day\",\n" +
+            "    \"cost\": 20000,\n" +
+            "    \"info\": \"There is no such thing? Of course there is! Grandma production doubles!\",\n" +
+            "    \"buildingIx\": 1\n" +
+            "  },\n" +
+            "  {\n" +
+            "    \"name\": \"Destructive mining\",\n" +
+            "    \"cost\": 60000,\n" +
+            "    \"info\": \"Kill all those ecoterrorists who want to stop your mining machines. Mine production x2!\",\n" +
+            "    \"buildingIx\": 3\n" +
             "  }\n" +
             "]";
 

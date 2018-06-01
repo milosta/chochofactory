@@ -46,8 +46,6 @@ public class DataStorage {
         String upgradeString = SharedPref.read("upgradeList", DefaultValues.upgradeList);
         collectionType = new TypeToken<ArrayList<Upgrade>>(){}.getType();
         upgradeList = gson.fromJson(upgradeString, collectionType);
-
-        int a = 1;  // FIXME
     }
 
     public void saveData() {

@@ -8,25 +8,67 @@
   {
     "name": "Cursor motivator",
     "cost": 300,
-    "info": "Cursors make double amount of chocolate!",
+    "info": "Motivated cursors work twice as hard!",
     "buildingIx": 0
   },
   {
     "name": "Huge finger",
     "cost": 500,
-    "info": "Tapping gives double amount of chocolate!",
+    "info": "Huge fingers give triple amount of chocolate!",
     "buildingIx": -1
   },
   {
-    "name": "Bigger finger",
-    "cost": 100,
-    "info": "Tapping gives double amount of chocolate!",
+    "name": "Send flowers to grandma",
+    "cost": 1000,
+    "info": "Happy grandmas make double amount of chocolate!",
+    "buildingIx": 1
+  },
+  {
+    "name": "Swift fingers",
+    "cost": 1500,
+    "info": "So much skill! Much wow! Triple amount of chocolate per tap!",
     "buildingIx": -1
   },
   {
-    "name": "Bigger finger",
-    "cost": 100,
-    "info": "Tapping gives double amount of chocolate!",
+    "name": "Certified confectioners",
+    "cost": 3000,
+    "info": "Confectioners work with twice efficiency!",
+    "buildingIx": 2
+  },
+  {
+    "name": "Cursors modernization",
+    "cost": 5000,
+    "info": "Modernize cursors to double their production!",
+    "buildingIx": 1
+  },
+  {
+    "name": "Make taps great again!",
+    "cost": 7500,
+    "info": "Your screen is screaming when tapping returns with tripple efiency!",
     "buildingIx": -1
+  },
+  {
+    "name": "How about a tap?",
+    "cost": 12000,
+    "info": "Still no carpal tunnel \nsyndrome? Taps x3!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Genetically modified cocoa beans",
+    "cost": 15000,
+    "info": "Plantation production doubles!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Happy grandmas day",
+    "cost": 20000,
+    "info": "There is no such thing? Of course there is! Grandma production doubles!",
+    "buildingIx": 1
+  },
+  {
+    "name": "Destructive mining",
+    "cost": 60000,
+    "info": "Kill all those ecoterrorists who want to stop your mining machines. Mine production x2!",
+    "buildingIx": 3
   }
 ]
