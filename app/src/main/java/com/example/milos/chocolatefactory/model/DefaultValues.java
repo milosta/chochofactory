@@ -55,51 +55,51 @@ public class DefaultValues {
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Mine\",\n" +
-            "    \"cost\": 22423,\n" +
+            "    \"cost\": 19423,\n" +
             "    \"count\": 0,\n" +
             "    \"cps\": 119\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Factory\",\n" +
-            "    \"cost\": 74925,\n" +
+            "    \"cost\": 66125,\n" +
             "    \"count\": 0,\n" +
             "    \"cps\": 499\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Wizard\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 297562,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 961\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Temple\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 1339029,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 3086\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Alchemy lab\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 6628193,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 8949\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Hadron collider\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 31815326,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 39375\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Portal\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 196805903,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 147658\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Time machine\",\n" +
-            "    \"cost\": 0,\n" +
+            "    \"cost\": 1012363686,\n" +
             "    \"count\": 0,\n" +
-            "    \"cps\": 0\n" +
+            "    \"cps\": 885951\n" +
             "  }\n" +
             "]";
 

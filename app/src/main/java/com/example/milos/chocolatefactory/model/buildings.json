@@ -25,50 +25,50 @@
   },
   {
     "name": "Mine",
-    "cost": 22423,
+    "cost": 19423,
     "count": 0,
     "cps": 119
   },
   {
     "name": "Factory",
-    "cost": 74925,
+    "cost": 66125,
     "count": 0,
     "cps": 499
   },
   {
     "name": "Wizard",
-    "cost": 0,
+    "cost": 297562,
     "count": 0,
-    "cps": 0
+    "cps": 961
   },
   {
     "name": "Temple",
-    "cost": 0,
+    "cost": 1339029,
     "count": 0,
-    "cps": 0
+    "cps": 3086
   },
   {
     "name": "Alchemy lab",
-    "cost": 0,
+    "cost": 6628193,
     "count": 0,
-    "cps": 0
+    "cps": 8949
   },
   {
     "name": "Hadron collider",
-    "cost": 0,
+    "cost": 31815326,
     "count": 0,
-    "cps": 0
+    "cps": 39375
   },
   {
     "name": "Portal",
-    "cost": 0,
+    "cost": 196805903,
     "count": 0,
-    "cps": 0
+    "cps": 147658
   },
   {
     "name": "Time machine",
-    "cost": 0,
+    "cost": 1012363686,
     "count": 0,
-    "cps": 0
+    "cps": 885951
   }
 ]

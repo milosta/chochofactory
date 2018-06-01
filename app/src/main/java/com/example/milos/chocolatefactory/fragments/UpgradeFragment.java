@@ -24,7 +24,7 @@ import java.util.List;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment representing a list of Upgrades.
  * Use the {@link UpgradeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -84,7 +84,7 @@ public class UpgradeFragment
         int buldingIx = upgrade.getBuildingIx();
 
         if (buldingIx == -1) {
-            mDS.multiplyClickVal(2);
+            mDS.multiplyClickVal(3);
         }
         else {
             Building building = mBuildings.get(buldingIx);

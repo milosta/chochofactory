@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A fragment representing a list of Items.
+ * A fragment representing a list of Buildings.
+ * Use the {@link BuildingFragment#newInstance} factory method to
+ * create an instance of this fragment.
  */
 public class BuildingFragment
         extends Fragment

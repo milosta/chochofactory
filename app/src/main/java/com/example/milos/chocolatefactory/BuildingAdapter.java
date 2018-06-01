@@ -44,9 +44,9 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         // - replace the contents of the view with that element
         Building building = buildingList.get(position);
         holder.mNameView.setText(building.getName());
-        holder.mCountView.setText(String.valueOf(building.getCount()));
-        holder.mCostView.setText(String.valueOf(building.getCost()));
-        holder.mCPSView.setText(String.valueOf(building.getCps()));
+        holder.mCountView.setText(Utils.toString(building.getCount()));
+        holder.mCostView.setText(Utils.toString(building.getCost()));
+        holder.mCPSView.setText(Utils.toString(building.getCps()));
         int imageId;
         try {
             imageId = DefaultValues.buildingIcons[position];
