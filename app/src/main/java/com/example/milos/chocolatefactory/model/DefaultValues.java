@@ -34,7 +34,15 @@ public class DefaultValues {
             R.drawable.building_time_machine
     };
     public static final int[] upgradeIcons = {
-
+            R.drawable.upgrade_tap,
+            R.drawable.upgrade_cursor,
+            R.drawable.upgrade_tap,
+            R.drawable.ic_upgrade_navigation_bar,
+            R.drawable.upgrade_tap,
+            R.drawable.ic_upgrade_navigation_bar,
+            R.drawable.upgrade_cursor,
+            R.drawable.upgrade_tap,
+            R.drawable.upgrade_tap,
     };
 
     public static final String buildingList = "[\n" +
