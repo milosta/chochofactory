@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 323.94241 323.94241" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <filter id="d">
+   <feBlend in2="BackgroundImage" mode="multiply"/>
+  </filter>
+  <linearGradient id="f" x1="224.98" x2="271.14" y1="33.837" y2="79.75" gradientTransform="matrix(.99976 -.13062 .13062 .99976 -24.722 27.509)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <radialGradient id="e" cx="2564.4" cy="267.44" r="131.46" fx="2569.7" fy="310.06" gradientTransform="matrix(-.80125 -5.1266e-8 -1.499e-8 -1.0983 2184.9 565.59)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0d99ff" offset="0"/>
+   <stop stop-color="#0079c1" offset=".26614"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g transform="matrix(.36142 .2223 -.2223 .36142 -83.358 91.087)">
+  <use transform="matrix(1.1492 0 0 1.1492 -86.539 21.668)" width="405.05228" height="313.37378" xlink:href="#c"/>
+ </g>
+ <path d="m-63.349-22.233h450.64v368.4h-450.64z" fill="#fff"/>
+ <g transform="translate(-418.03 320.59)">
+  <g id="c" transform="matrix(0 -1.5963 1.5963 0 -27.975 31.335)">
+   <path id="b" d="m151.07 398.57c15.135-113.32-99.267-80.465-150.58 1.2091 26.702-194.63 227.1-70.642 150.58-1.2091z" fill="url(#e)"/>
+   <use transform="matrix(.70711 .70711 -.70711 .70711 304.16 27.406)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(0 1 -1 0 499.86 261.86)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(-.70711 .70711 -.70711 -.70711 472.46 566.03)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(-1 0 0 -1 238 761.72)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(-.70711 -.70711 .70711 -.70711 -66.164 734.32)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(0 -1 1 0 -261.86 499.86)" width="396.78284" height="368.40176" xlink:href="#b"/>
+   <use transform="matrix(.70711 -.70711 .70711 .70711 -234.46 195.7)" width="396.78284" height="368.40176" xlink:href="#b"/>
+  </g>
+ </g>
+ <g transform="matrix(.19145 -.7145 .7145 .19145 165.7 607.13)" filter="url(#d)">
+  <use transform="matrix(1.1492 0 0 1.1492 -86.539 21.668)" width="405.05228" height="313.37378" xlink:href="#c"/>
+ </g>
+ <g transform="matrix(.42221 .25969 -.25969 .42221 -124.62 79.164)" filter="url(#d)">
+  <use transform="matrix(1.1492 0 0 1.1492 -86.539 21.668)" width="405.05228" height="313.37378" xlink:href="#c"/>
+ </g>
+ <g transform="matrix(.24377 .37848 -.37848 .24377 -40.208 -18.396)" filter="url(#d)">
+  <use transform="matrix(1.1492 0 0 1.1492 -86.539 21.668)" width="405.05228" height="313.37378" xlink:href="#c"/>
+ </g>
+ <g transform="matrix(1.0935 0 0 1.0935 -73.134 -37.491)">
+  <path id="a" d="m256.77 78.226c-20.324-36.026-103.82-77.687-138.74-59.047l-46.793 34.771c89.916-46.326 166.49-2.196 185.53 24.276z" fill="url(#f)" opacity=".99"/>
+  <use transform="matrix(.96593 .25882 -.25882 .96593 54.535 -49.431)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.86603 .5 -.5 .86603 120 -83.063)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.70711 .70711 -.70711 .70711 191.95 -98.604)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.5 .86603 -.86603 .5 265.46 -94.995)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.25882 .96593 -.96593 .25882 335.54 -72.481)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(3.6762e-8 1 -1 3.6762e-8 397.4 -32.598)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.25882 .96593 -.96593 -.25882 446.83 21.937)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.5 .86603 -.86603 -.5 480.46 87.407)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.70711 .70711 -.70711 -.70711 496 159.35)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.86603 .5 -.5 -.86603 492.4 232.87)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.96593 .25882 -.25882 -.96593 469.88 302.94)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-1 3.6762e-8 -3.6762e-8 -1 430 364.8)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.96593 -.25882 .25882 -.96593 375.46 414.23)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.86603 -.5 .5 -.86603 310 447.87)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.70711 -.70711 .70711 -.70711 238.05 463.41)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.5 -.86603 .86603 -.5 164.54 459.8)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-.25882 -.96593 .96593 -.25882 94.46 437.28)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(-3.6762e-8 -1 1 -3.6762e-8 32.598 397.4)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.25882 -.96593 .96593 .25882 -16.833 342.87)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.5 -.86603 .86603 .5 -50.465 277.4)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.70711 -.70711 .70711 .70711 -66.006 205.45)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.86603 -.5 .5 .86603 -62.396 131.94)" width="396.78284" height="368.40176" xlink:href="#a"/>
+  <use transform="matrix(.96593 -.25882 .25882 .96593 -39.883 61.861)" width="396.78284" height="368.40176" xlink:href="#a"/>
+ </g>
+</svg>

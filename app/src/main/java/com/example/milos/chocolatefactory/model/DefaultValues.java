@@ -23,9 +23,18 @@ public class DefaultValues {
             R.drawable.building_cursor,
             R.drawable.building_grandma,
             R.drawable.building_confectioner,
+            R.drawable.building_plantation,
+            R.drawable.building_mine,
+            R.drawable.factory,
+            R.drawable.building_wizard,
+            R.drawable.building_temple,
+            R.drawable.building_alchemy,
+            R.drawable.building_collider,
+            R.drawable.building_portal,
+            R.drawable.building_time_machine
     };
     public static final int[] upgradeIcons = {
-            R.drawable.ic_upgrade_navigation_bar,
+
     };
 
     public static final String buildingList = "[\n" +
