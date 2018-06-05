@@ -85,7 +85,7 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
     private int getIconId(int buildingIx) {
         int imageId;
         try {
-            imageId = DefaultValues.upgradeIcons[buildingIx + 2];
+            imageId = DefaultValues.upgradeIcons[buildingIx + 3];
         } catch (IndexOutOfBoundsException ex) {
             imageId = R.drawable.ic_navigation_upgrade;
         }

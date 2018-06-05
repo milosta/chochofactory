@@ -68,7 +68,7 @@
   {
     "name": "CPS taps!",
     "cost": 7500,
-    "info": "Every tap gives you additional 2 % of your CPS as chocolate!",
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
     "buildingIx": -2
   },
   {
@@ -158,7 +158,7 @@
   {
     "name": "CPS taps II!",
     "cost": 1200000,
-    "info": "Every tap gives you additional 2 % of your CPS as chocolate!",
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
     "buildingIx": -2
   },
   {
@@ -194,7 +194,7 @@
   {
     "name": "CPS taps III!",
     "cost": 300000000,
-    "info": "Every tap gives you additional 2 % of your CPS as chocolate!",
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
     "buildingIx": -2
   },
   {
@@ -212,7 +212,7 @@
   {
     "name": "CPS taps IV!",
     "cost": 2000000000,
-    "info": "Every tap gives you additional 2 % of your CPS as chocolate!",
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
     "buildingIx": -2
   },
   {
@@ -220,6 +220,12 @@
     "cost": 9400000000,
     "info": "Stargate stabilizes the portals to double their production!",
     "buildingIx": 10
+  },
+  {
+    "name": "CPS taps V!",
+    "cost": 20000000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
   },
   {
     "name": "Time lords",

@@ -88,7 +88,7 @@ public class UpgradeFragment
             mDS.multiplyClickVal(2);
         }
         else if (buldingIx == -2) {
-            mDS.increasecpsFractionClick(0.02f);
+            mDS.increasecpsFractionClick(0.03f);
         }
         else if (buldingIx == -3) {
             String msg = "YOU WON!!!";
