@@ -5,6 +5,7 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,19 +32,21 @@ public class DataStorage {
 
     public void init(Context context) {
         SharedPref.init(context);
-        loadData();
+        loadData(context);
     }
 
-    private void loadData() {
+    private void loadData(Context context) {
         count = SharedPref.read("count", DefaultValues.count);
         cps = SharedPref.read("cps", DefaultValues.cps);
         clickVal = SharedPref.read("clickVal", DefaultValues.clickVal);
 
-        String buildingString = SharedPref.read("buildingList", DefaultValues.buildingList);
+        String defVal = loadAsset(context, "buildings.json");
+        String buildingString = SharedPref.read("buildingList", defVal);
         Type collectionType = new TypeToken<ArrayList<Building>>(){}.getType();
         buildingList = gson.fromJson(buildingString, collectionType);
 
-        String upgradeString = SharedPref.read("upgradeList", DefaultValues.upgradeList);
+        defVal = loadAsset(context, "upgrades.json");
+        String upgradeString = SharedPref.read("upgradeList", defVal);
         collectionType = new TypeToken<ArrayList<Upgrade>>(){}.getType();
         upgradeList = gson.fromJson(upgradeString, collectionType);
     }
@@ -96,5 +99,20 @@ public class DataStorage {
 
     public void  multiplyClickVal(double multiplier) {
         clickVal = (long) (clickVal * multiplier);
+    }
+
+    private String loadAsset(Context context, String name) {
+        String res;
+        try {
+            InputStream is = context.getAssets().open(name);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            res = new String(buffer, "UTF-8");
+        } catch (java.io.IOException ex) {
+            return null;
+        }
+        return res;
     }
 }
