@@ -36,13 +36,6 @@ public class DefaultValues {
     public static final int[] upgradeIcons = {
             R.drawable.upgrade_tap,
             R.drawable.upgrade_cursor,
-            R.drawable.upgrade_tap,
-            R.drawable.ic_upgrade_navigation_bar,
-            R.drawable.upgrade_tap,
-            R.drawable.ic_upgrade_navigation_bar,
-            R.drawable.upgrade_cursor,
-            R.drawable.upgrade_tap,
-            R.drawable.upgrade_tap,
     };
 
     public static final String buildingList = "[\n" +
@@ -161,7 +154,7 @@ public class DefaultValues {
             "    \"name\": \"Cursors modernization\",\n" +
             "    \"cost\": 5000,\n" +
             "    \"info\": \"Modernize cursors to double their production!\",\n" +
-            "    \"buildingIx\": 1\n" +
+            "    \"buildingIx\": 0\n" +
             "  },\n" +
             "  {\n" +
             "    \"name\": \"Make taps great again!\",\n" +

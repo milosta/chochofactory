@@ -39,7 +39,7 @@
     "name": "Cursors modernization",
     "cost": 5000,
     "info": "Modernize cursors to double their production!",
-    "buildingIx": 1
+    "buildingIx": 0
   },
   {
     "name": "Make taps great again!",

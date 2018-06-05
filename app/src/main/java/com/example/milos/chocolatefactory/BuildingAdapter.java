@@ -17,7 +17,6 @@ import java.util.Map;
 /**
  * {@link RecyclerView.Adapter} that can display a {@link Building} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
  */
 public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHolder> {
     private final List<Building> buildingList;

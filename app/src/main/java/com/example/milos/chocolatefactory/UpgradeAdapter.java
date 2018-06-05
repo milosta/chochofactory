@@ -14,9 +14,8 @@ import com.example.milos.chocolatefactory.model.Upgrade;
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link Building} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link Upgrade} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
  */
 public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHolder> {
     private final List<Upgrade> upgradeList;
@@ -45,13 +44,7 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
         holder.mNameView.setText(upgrade.getName());
         holder.mCostView.setText(Utils.toString(upgrade.getCost()));
         holder.mInfoView.setText(upgrade.getInfo());
-        int imageId;
-        try {
-            imageId = DefaultValues.upgradeIcons[position];
-        } catch (IndexOutOfBoundsException ex) {
-            imageId = R.drawable.ic_upgrade_navigation_bar;
-        }
-        holder.mImageView.setImageResource(imageId);
+        holder.mImageView.setImageResource(getIconId(upgrade.getBuildingIx()));
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +81,16 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
             mCostView = (TextView) view.findViewById(R.id.cost);
             mInfoView = (TextView) view.findViewById(R.id.info);
         }
+    }
+
+    private int getIconId(int buildingIx) {
+        int imageId;
+        try {
+            imageId = DefaultValues.upgradeIcons[buildingIx + 1];
+        } catch (IndexOutOfBoundsException ex) {
+            imageId = R.drawable.ic_upgrade_navigation_bar;
+        }
+        return imageId;
     }
 
     public interface OnListFragmentInteractionListener {
