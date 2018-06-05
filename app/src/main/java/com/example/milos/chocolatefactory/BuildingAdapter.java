@@ -10,9 +10,7 @@ import android.widget.TextView;
 import com.example.milos.chocolatefactory.model.Building;
 import com.example.milos.chocolatefactory.model.DefaultValues;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * {@link RecyclerView.Adapter} that can display a {@link Building} and makes a call to the
@@ -50,7 +48,7 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.ViewHo
         try {
             imageId = DefaultValues.buildingIcons[position];
         } catch (IndexOutOfBoundsException ex) {
-            imageId = R.drawable.ic_placeholder;
+            imageId = R.drawable.ic_navigation_home;
         }
         holder.mImageView.setImageResource(imageId);
 

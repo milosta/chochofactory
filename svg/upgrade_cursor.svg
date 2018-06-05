@@ -7,11 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 542.91095 271.32742"
+   viewBox="0 0 500 499.99999"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="upgrade_cursor.svg">
+   sodipodi:docname="upgrade_cursor.svg"
+   width="500"
+   height="500">
   <metadata
      id="metadata30">
     <rdf:RDF>
@@ -20,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -36,9 +39,9 @@
      inkscape:window-height="1147"
      id="namedview28"
      showgrid="false"
-     inkscape:zoom="1.9380248"
-     inkscape:cx="80.012603"
-     inkscape:cy="84.438049"
+     inkscape:zoom="0.9690124"
+     inkscape:cx="-84.067017"
+     inkscape:cy="278.85534"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -47,9 +50,9 @@
      id="defs4">
     <filter
        id="a"
-       x="-.17226"
-       y="-.09207"
-       width="1.3445"
+       x="-0.17226"
+       y="-0.092069998"
+       width="1.3444999"
        height="1.1841">
       <feGaussianBlur
          stdDeviation="14.227"
@@ -58,9 +61,10 @@
     <radialGradient
        id="b"
        cx="137.88"
-       cy="139.6"
+       cy="139.60001"
        r="117.71"
-       gradientUnits="userSpaceOnUse">
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.94028,0,0,1.94028,-13.402573,-15.049474)">
       <stop
          stop-color="#686868"
          offset="0"
@@ -73,31 +77,24 @@
     </radialGradient>
   </defs>
   <path
-     d="m253.67 139.6a115.8 115.8 0 0 1 -231.6 0 115.8 115.8 0 1 1 231.6 0z"
+     d="m 478.78825,255.81361 a 224.68442,224.68442 0 0 1 -449.368844,0 224.68442,224.68442 0 1 1 449.368844,0 z"
      id="path14"
-     fill="url(#b)" />
+     inkscape:connector-curvature="0"
+     style="fill:url(#b)" />
   <path
-     transform="matrix(.38236 0 0 .38236 -446.34 -34.897)"
-     d="m1462.3 275.32 0.3948 307.5 69.918-61.461 49.259 124.83c5.8525-17.678 19.157-17.724 34.077-13.95l-48.875-124.57 93.438 1.5489-198.21-233.9z"
-     fill="#333"
-     filter="url(#a)"
-     stroke="#333"
-     stroke-linejoin="bevel"
-     stroke-width="15"
-     id="path16" />
+     transform="matrix(0.83825609,0,0,0.73553144,-1029.9006,-79.831839)"
+     d="m 1462.3,275.32 0.3948,307.5 69.918,-61.461 49.259,124.83 c 5.8525,-17.678 19.157,-17.724 34.077,-13.95 l -48.875,-124.57 93.438,1.5489 -198.21,-233.9 z"
+     id="path16"
+     inkscape:connector-curvature="0"
+     style="fill:#333333;stroke:#333333;stroke-width:15;stroke-linejoin:bevel;filter:url(#a)" />
   <path
-     d="m1462.3 275.32 0.3948 307.5 69.918-61.461 49.259 124.83c5.8525-17.678 19.157-17.724 34.077-13.95l-48.875-124.57 93.438 1.5489-198.21-233.9z"
+     d="m 189.41391,110.75758 0.33093,226.17594 58.6092,-45.20651 41.29165,91.8164 c 4.90589,-13.00272 16.05847,-13.03656 28.56525,-10.26068 l -40.96976,-91.62514 78.32497,1.13927 -166.15072,-172.04082 z"
      id="path18"
-     transform="matrix(.38236 0 0 .38236 -449.29 -41.092)"
-     stroke-linejoin="bevel"
-     stroke-width="15"
-     stroke="#000"
-     fill="#fff" />
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;stroke:#000000;stroke-width:11.77823639;stroke-linejoin:bevel" />
   <path
-     d="m137.76 10.004-0.21508 50.925 0.21508-50.925zm87.607 36.826-35.965 36.061 35.965-36.061zm-178.35 1.7086 35.965 36.061-35.965-36.061zm215.64 86.867-50.925 0.0597 50.925-0.0597zm-201.73 1.0754-50.925 0.0597 50.925-0.0597zm128.17 52.263 35.965 36.061-35.965-36.061zm-105.69 0.21508-35.965 36.049 35.965-36.049zm53.972 21.436-0.22704 50.925 0.22704-50.925z"
-     fill="none"
-     stroke="#ccc"
-     stroke-linecap="round"
-     stroke-width="3.8236"
-     id="path20" />
+     d="M 253.8904,4.361087 253.47308,103.16985 253.8904,4.361087 Z M 423.87251,75.813838 354.09034,145.78227 423.87251,75.813838 Z M 77.823571,79.129 147.60574,149.09744 77.823571,79.129 Z m 418.401979,168.5463 -98.80876,0.11584 98.80876,-0.11584 z m -391.41268,2.08658 -98.808763,0.11583 98.808763,-0.11583 z m 248.68568,101.40485 69.78217,69.96844 -69.78217,-69.96844 z m -205.06819,0.41732 -69.78217,69.94515 69.78217,-69.94515 z m 104.72079,41.59184 -0.44052,98.80876 0.44052,-98.80876 z"
+     id="path20"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#cccccc;stroke-width:7.41885471;stroke-linecap:round" />
 </svg>

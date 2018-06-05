@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.milos.chocolatefactory.model.Building;
 import com.example.milos.chocolatefactory.model.DefaultValues;
 import com.example.milos.chocolatefactory.model.Upgrade;
 
@@ -88,7 +87,7 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
         try {
             imageId = DefaultValues.upgradeIcons[buildingIx + 1];
         } catch (IndexOutOfBoundsException ex) {
-            imageId = R.drawable.ic_upgrade_navigation_bar;
+            imageId = R.drawable.ic_navigation_upgrade;
         }
         return imageId;
     }
