@@ -8,6 +8,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -51,6 +52,7 @@ public class DataStorage {
         String upgradeString = SharedPref.read("upgradeList", defVal);
         collectionType = new TypeToken<ArrayList<Upgrade>>(){}.getType();
         upgradeList = gson.fromJson(upgradeString, collectionType);
+        Collections.sort(upgradeList);
     }
 
     public void saveData() {

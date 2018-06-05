@@ -67,7 +67,7 @@
   },
   {
     "name": "Time machine",
-    "cost": 90000000000,
+    "cost": 25000000000,
     "count": 0,
     "cps": 1000000
   }

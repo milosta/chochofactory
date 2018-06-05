@@ -1,10 +1,12 @@
 package com.example.milos.chocolatefactory.model;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by milos on 26.5.18.
  */
 
-public class Upgrade {
+public class Upgrade implements Comparable {
     private String name;
     private Long cost;
     private String info;
@@ -31,5 +33,15 @@ public class Upgrade {
 
     public int getBuildingIx() {
         return buildingIx;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        Upgrade other = (Upgrade) o;
+        if (cost > other.cost)
+            return 1;
+        else if (cost < other.cost)
+            return -1;
+        return 0;
     }
 }
