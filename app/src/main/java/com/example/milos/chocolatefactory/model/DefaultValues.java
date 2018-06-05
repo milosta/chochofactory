@@ -27,7 +27,7 @@ public class DefaultValues {
             R.drawable.building_mine,
             R.drawable.factory,
             R.drawable.building_wizard,
-            R.drawable.ic_building_temple,
+            R.drawable.building_temple,
             R.drawable.ic_building_alchemy,
             R.drawable.building_collider,
             R.drawable.building_portal,
