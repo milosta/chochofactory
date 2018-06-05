@@ -22,7 +22,6 @@ public class SharedPref
     public static String read(String key, String defValue) {
         return mSharedPref.getString(key, defValue);
     }
-
     public static void write(String key, String value) {
         SharedPreferences.Editor editor = mSharedPref.edit();
         editor.putString(key, value);
@@ -32,10 +31,18 @@ public class SharedPref
     public static Long read(String key, Long defValue) {
         return mSharedPref.getLong(key, defValue);
     }
-
     public static void write(String key, Long value) {
         SharedPreferences.Editor editor = mSharedPref.edit();
         editor.putLong(key, value);
+        editor.apply();
+    }
+
+    public static float read(String key, float defValue) {
+        return mSharedPref.getFloat(key, defValue);
+    }
+    public static void write(String key, float value) {
+        SharedPreferences.Editor editor = mSharedPref.edit();
+        editor.putFloat(key, value);
         editor.apply();
     }
 }

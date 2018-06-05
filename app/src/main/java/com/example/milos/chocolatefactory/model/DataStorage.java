@@ -21,6 +21,7 @@ public class DataStorage {
     private Long count;
     private Long cps;
     private Long clickVal;
+    private float cpsFractionClick;
     private List<Building> buildingList;
     private List<Upgrade> upgradeList;
 
@@ -39,6 +40,7 @@ public class DataStorage {
         count = SharedPref.read("count", DefaultValues.count);
         cps = SharedPref.read("cps", DefaultValues.cps);
         clickVal = SharedPref.read("clickVal", DefaultValues.clickVal);
+        cpsFractionClick = SharedPref.read("cpsFractionClick", DefaultValues.cpsFractionClick);
 
         String defVal = loadAsset(context, "buildings.json");
         String buildingString = SharedPref.read("buildingList", defVal);
@@ -55,6 +57,7 @@ public class DataStorage {
         SharedPref.write("count", count);
         SharedPref.write("cps", cps);
         SharedPref.write("clickVal", clickVal);
+        SharedPref.write("cpsFractionClick", cpsFractionClick);
 
         SharedPref.write("buildingList", gson.toJson(buildingList));
         SharedPref.write("upgradeList", gson.toJson(upgradeList));
@@ -83,6 +86,10 @@ public class DataStorage {
         cps += count;
     }
 
+    public void increasecpsFractionClick(float count) {
+        cpsFractionClick += count;
+    }
+
     public List<Building> getBuildingList() {
         return buildingList;
     }
@@ -94,7 +101,8 @@ public class DataStorage {
         count += cps;
     }
     public void click() {
-        count += clickVal;
+        Long addition = (long) (clickVal + cps * cpsFractionClick);
+        count += addition;
     }
 
     public void  multiplyClickVal(double multiplier) {

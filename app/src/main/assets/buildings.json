@@ -1,74 +1,74 @@
 [
   {
     "name": "Cursor",
-    "cost": 27,
+    "cost": 30,
     "count": 0,
     "cps": 1
   },
   {
     "name": "Grandma",
-    "cost": 174,
+    "cost": 200,
     "count": 0,
     "cps": 3
   },
   {
     "name": "Confectioner",
-    "cost": 941,
+    "cost": 1200,
     "count": 0,
     "cps": 10
   },
   {
     "name": "Plantation",
-    "cost": 4701,
+    "cost": 7000,
     "count": 0,
-    "cps": 37
+    "cps": 40
   },
   {
     "name": "Mine",
-    "cost": 19423,
+    "cost": 35000,
     "count": 0,
-    "cps": 119
+    "cps": 120
   },
   {
     "name": "Factory",
-    "cost": 66125,
+    "cost": 100000,
     "count": 0,
-    "cps": 499
+    "cps": 400
   },
   {
     "name": "Wizard",
-    "cost": 297562,
+    "cost": 500000,
     "count": 0,
-    "cps": 961
+    "cps": 1000
   },
   {
     "name": "Temple",
-    "cost": 1339029,
+    "cost": 2000000,
     "count": 0,
-    "cps": 3086
+    "cps": 3500
   },
   {
     "name": "Alchemy lab",
-    "cost": 6628193,
+    "cost": 25000000,
     "count": 0,
-    "cps": 8949
+    "cps": 12000
   },
   {
     "name": "Hadron collider",
-    "cost": 31815326,
+    "cost": 150000000,
     "count": 0,
-    "cps": 39375
+    "cps": 21000
   },
   {
     "name": "Portal",
-    "cost": 196805903,
+    "cost": 1000000000,
     "count": 0,
-    "cps": 147658
+    "cps": 140000
   },
   {
     "name": "Time machine",
-    "cost": 1012363686,
+    "cost": 90000000000,
     "count": 0,
-    "cps": 885951
+    "cps": 1000000
   }
 ]

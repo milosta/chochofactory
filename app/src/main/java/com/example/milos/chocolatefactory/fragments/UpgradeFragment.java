@@ -78,20 +78,21 @@ public class UpgradeFragment
 
         if (!mDS.decreaseCount(upgrade.getCost())) {
             String msg = "Not enough chocolate!";
-            if (mToast == null) {
-                mToast = Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT);
-            }
-            if (!mToast.getView().isShown()) {
-                mToast.setText(msg);
-                mToast.show();
-            }
+            showToast(msg);
             return;
         }
 
         int buldingIx = upgrade.getBuildingIx();
 
         if (buldingIx == -1) {
-            mDS.multiplyClickVal(3);
+            mDS.multiplyClickVal(2);
+        }
+        else if (buldingIx == -2) {
+            mDS.increasecpsFractionClick(0.02f);
+        }
+        else if (buldingIx == -3) {
+            String msg = "YOU WON!!!";
+            showToast(msg);
         }
         else {
             Building building = mBuildings.get(buldingIx);
@@ -104,5 +105,15 @@ public class UpgradeFragment
 
         GameActivity activity = (GameActivity) getActivity();
         activity.updateUi();
+    }
+
+    private void showToast(String msg) {
+        if (mToast == null) {
+            mToast = Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT);
+        }
+        if (!mToast.getView().isShown()) {
+            mToast.setText(msg);
+            mToast.show();
+        }
     }
 }
