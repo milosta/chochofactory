@@ -36,7 +36,7 @@ public class DefaultValues {
     };
     public static final int[] upgradeIcons = {
             R.drawable.ic_upgrade_final,
-            R.drawable.ic_upgrade_tap,
+            R.drawable.ic_upgrade_tap_cps,
             R.drawable.ic_upgrade_tap,
             R.drawable.ic_upgrade_cursor,
     };
