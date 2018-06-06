@@ -31,10 +31,9 @@
         android:id="@+id/CPT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/message"
-        android:layout_alignBottom="@+id/message"
         android:layout_alignEnd="@+id/chocolateButton"
-        android:layout_marginEnd="58dp"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="8dp"
         android:text="CPT"
         android:textSize="15sp" />
 </RelativeLayout>
