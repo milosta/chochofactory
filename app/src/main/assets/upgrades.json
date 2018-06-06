@@ -7,81 +7,132 @@
   },
   {
     "name": "Huge finger",
-    "cost": 400,
+    "cost": 500,
     "info": "Huge fingers give double amount of chocolate!",
     "buildingIx": -1
   },
   {
     "name": "Enormous finger",
-    "cost": 750,
+    "cost": 1300,
     "info": "Enormous fingers give double amount of chocolate!",
     "buildingIx": -1
   },
   {
     "name": "Swift fingers",
-    "cost": 1500,
+    "cost": 2800,
     "info": "So much skill! Much wow! Double amount of chocolate per tap!",
     "buildingIx": -1
   },
   {
     "name": "Two fingers",
-    "cost": 4000,
+    "cost": 6000,
     "info": "With two fingers you can tap twice as fast!",
     "buildingIx": -1
   },
   {
-    "name": "CPS taps!",
-    "cost": 7500,
-    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
-    "buildingIx": -2
-  },
-  {
     "name": "Make taps great again!",
-    "cost": 10000,
+    "cost": 13000,
     "info": "Your screen is screaming when tapping returns with double efiency!",
     "buildingIx": -1
   },
   {
     "name": "How about a tap?",
-    "cost": 17000,
+    "cost": 29000,
     "info": "Still no carpal tunnel syndrome? Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "Two hands tap",
-    "cost": 30000,
+    "cost": 70000,
     "info": "Tapping with two hands? Why not. Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "Three hands tap",
-    "cost": 75000,
+    "cost": 150000,
     "info": "What about a third hand? You know what I mean! Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "Four hands tap",
-    "cost": 210000,
+    "cost": 310000,
     "info": "Four hands? Ask a friend for help. Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "Mighty tap",
-    "cost": 750000,
+    "cost": 650000,
     "info": "Man, you are definitely gonna need a new screen. Taps x2!",
     "buildingIx": -1
   },
   {
-    "name": "CPS taps II!",
-    "cost": 1200000,
+    "name": "No hands tap",
+    "cost": 1350000,
+    "info": "Look ma, no hands! This peculiar way of tapping doubles the production!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Mysterious tap",
+    "cost": 2800000,
+    "info": "Tapping x2!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Magical tap",
+    "cost": 6000000,
+    "info": "Tapping x2!",
+    "buildingIx": -1
+  },
+  {
+    "name": "Mystical tap",
+    "cost": 15000000,
+    "info": "Tapping x2!",
+    "buildingIx": -1
+  },
+
+
+
+  {
+    "name": "CPS taps!",
+    "cost": 45000,
     "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
     "buildingIx": -2
   },
   {
-    "name": "No hands tap",
-    "cost": 2500000,
-    "info": "Look ma, no hands! This peculiar way of tapping doubles the production!",
-    "buildingIx": -1
+    "name": "CPS taps II!",
+    "cost": 475000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
+  },
+  {
+    "name": "CPS taps III!",
+    "cost": 4000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
+  },
+  {
+    "name": "CPS taps IV!",
+    "cost": 100000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
+  },
+  {
+    "name": "CPS taps V!",
+    "cost": 1000000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
+  },
+  {
+    "name": "CPS taps VI!",
+    "cost": 7500000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
+  },
+  {
+    "name": "CPS taps VII!",
+    "cost": 50000000000,
+    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
+    "buildingIx": -2
   },
 
 
@@ -100,19 +151,31 @@
   },
   {
     "name": "Optical cursors",
-    "cost": 5000,
+    "cost": 11250,
     "info": "Optical cursors are two times faster!",
     "buildingIx": 0
   },
   {
+    "name": "Hyperactive cursors",
+    "cost": 112500,
+    "info": "Hyperactive cursors are two times faster!",
+    "buildingIx": 0
+  },
+  {
     "name": "Laser cursors",
-    "cost": 15000,
+    "cost": 2812500,
     "info": "Laser cursors are two times faster!",
     "buildingIx": 0
   },
   {
+    "name": "Cursors über alles!",
+    "cost": 98437500,
+    "info": "Omnipotent cursors are unstoppable. Cursors work two times faster!",
+    "buildingIx": 0
+  },
+  {
     "name": "Omnipotent cursors",
-    "cost": 55000,
+    "cost": 4429687500,
     "info": "Omnipotent cursors are unstoppable. Cursors work two times faster!",
     "buildingIx": 0
   },
@@ -132,15 +195,27 @@
     "buildingIx": 1
   },
   {
-    "name": "Make grandamas sexy again!",
-    "cost": 25000,
-    "info": "Not literally! Grandmas x2!",
+    "name": "Visit grandamas",
+    "cost": 50000,
+    "info": "Don't forget to regularly visit your grandparents. Grandmas x2!",
     "buildingIx": 1
   },
   {
-    "name": "Visit grandamas",
-    "cost": 100000,
-    "info": "Don't forget to regularly visit your grandparents. Grandmas x2!",
+    "name": "New magazine recipe",
+    "cost": 1250000,
+    "info": "Your grandma found a new recipe for chocolate. Grandmas x2!",
+    "buildingIx": 1
+  },
+  {
+    "name": "A gift for grandma!",
+    "cost": 43750000,
+    "info": "Happy grandmas make double amount of chocolate!",
+    "buildingIx": 1
+  },
+  {
+    "name": "Make grandamas sexy again!",
+    "cost": 1968750000,
+    "info": "Not literally! Grandmas x2!",
     "buildingIx": 1
   },
 
@@ -148,20 +223,32 @@
 
   {
     "name": "Certified confectioners",
-    "cost": 4500,
+    "cost": 12000,
     "info": "Confectioners work with twice efficiency!",
     "buildingIx": 2
   },
   {
     "name": "Pay raise",
-    "cost": 22000,
+    "cost": 60000,
     "info": "Well paid confectioners work twice that hard!",
     "buildingIx": 2
   },
   {
     "name": "Extra vacation days",
-    "cost": 65000,
-    "info": "Happy confectioners are good confectioners – x2!",
+    "cost": 600000,
+    "info": "Happy confectioners are good confectioners –> x2!",
+    "buildingIx": 2
+  },
+  {
+    "name": "Overtime",
+    "cost": 15000000,
+    "info": "Little overtime never killed nobody. Confectioners x2!",
+    "buildingIx": 2
+  },
+  {
+    "name": "Salary cut ",
+    "cost": 525000000,
+    "info": "Cutting down the sallary allows more workers. Confectioners x2!",
     "buildingIx": 2
   },
 
@@ -169,8 +256,32 @@
 
   {
     "name": "GMO cocoa beans",
-    "cost": 20000,
+    "cost": 80000,
     "info": "Genetic modifications doubles plantation production!",
+    "buildingIx": 3
+  },
+  {
+    "name": "GMO cocoa beans II",
+    "cost": 400000,
+    "info": "Genetic modifications doubles plantation production!",
+    "buildingIx": 3
+  },
+  {
+    "name": "GMO cocoa beans III",
+    "cost": 4000000,
+    "info": "Genetic modifications doubles plantation production!",
+    "buildingIx": 3
+  },
+  {
+    "name": "GMO cocoa beans",
+    "cost": 100000000,
+    "info": "Genetic modifications doubles plantation production!",
+    "buildingIx": 3
+  },
+  {
+    "name": "Slaves",
+    "cost": 3500000000,
+    "info": "What?! It has been proven effective before. Plantations x2!",
     "buildingIx": 3
   },
 
@@ -179,22 +290,64 @@
 
   {
     "name": "Destructive mining",
-    "cost": 100000,
+    "cost": 400000,
     "info": "Kill all those ecoterrorists who want to stop your mining machines. Mines x2!",
     "buildingIx": 4
   },
   {
     "name": "Intesive mining",
-    "cost": 900000,
+    "cost": 2000000,
     "info": "We need to go deeper. Mines x2!",
+    "buildingIx": 4
+  },
+  {
+    "name": "Intesive mining II",
+    "cost": 20000000,
+    "info": "We need to go deeper. Mines x2!",
+    "buildingIx": 4
+  },
+  {
+    "name": "Extesive mining",
+    "cost": 500000000,
+    "info": "Destroy all near villages while mining! Mines x2!",
+    "buildingIx": 4
+  },
+  {
+    "name": "New mining machines",
+    "cost": 17500000000,
+    "info": "Better, faster stronger! Mines x2!",
     "buildingIx": 4
   },
 
 
-  
+
+  {
+    "name": "Modernize factories",
+    "cost": 3000000,
+    "info": "Modernized factories are two times more efficient. Factories x2!",
+    "buildingIx": 5
+  },
+  {
+    "name": "Expand factories",
+    "cost": 15000000,
+    "info": "The bigger, the better. Factories x2!",
+    "buildingIx": 5
+  },
+  {
+    "name": "Expand factories II",
+    "cost": 150000000,
+    "info": "The bigger, the better. Factories x2!",
+    "buildingIx": 5
+  },
+  {
+    "name": "Expand factories III",
+    "cost": 3750000000,
+    "info": "The bigger, the better. Factories x2!",
+    "buildingIx": 5
+  },
   {
     "name": "Child labor",
-    "cost": 520000,
+    "cost": 131250000000,
     "info": "Cheaper and healthier workforce. Factories x2!",
     "buildingIx": 5
   },
@@ -203,73 +356,145 @@
 
   {
     "name": "Spellbooks",
-    "cost": 3900000,
-    "info": "New spells to cast twice as much of chocolate!",
+    "cost": 20000000,
+    "info": "New spells to cast twice as much of chocolate. Wizards x2!",
     "buildingIx": 6
   },
   {
+    "name": "Instant spells",
+    "cost": 100000000,
+    "info": "Instant spells allow cast twice as much of chocolate. Wizards x2!",
+    "buildingIx": 6
+  },
+  {
+    "name": "Magical creatures",
+    "cost": 1000000000,
+    "info": "These creatures are made of magic itself. Wizards x2!",
+    "buildingIx": 6
+  },
+  {
+    "name": "Modern Spellbooks",
+    "cost": 25000000000,
+    "info": "New spells to cast twice as much of chocolate. Wizards x2!",
+    "buildingIx": 6
+  },
+  {
+    "name": "Reality rift",
+    "cost": 875000000000,
+    "info": "Rift in reality itself! Wizards x2!",
+    "buildingIx": 6
+  },
+
+
+
+  {
     "name": "Chocotronos",
-    "cost": 13000000,
-    "info": "All hail the mighty Chocotronos, god of chocolate!",
+    "cost": 170000000,
+    "info": "All hail the mighty Chocotronos, god of chocolate! Temples x2!",
     "buildingIx": 7
   },
   {
-    "name": "Mysterious tap",
-    "cost": 75000000,
-    "info": "Tapping x2!",
-    "buildingIx": -1
+    "name": "Holy Grail",
+    "cost": 850000000,
+    "info": "You found the Holy Grail! Temples x2!",
+    "buildingIx": 7
   },
   {
-    "name": "Essence of chocolate",
-    "cost": 140000000,
-    "info": "Your scientists finally discovered the true esence of chocolate. Labs x2!",
+    "name": "Songbooks",
+    "cost": 6375000000,
+    "info": "Sing to praise the God of chocolate!",
+    "buildingIx": 7
+  },
+  {
+    "name": "Blood sacrifices",
+    "cost": 63750000000,
+    "info": "Nothing is more important than chocolate! Temples x2!",
+    "buildingIx": 7
+  },
+
+
+
+  {
+    "name": "New lab equipment",
+    "cost": 950000000,
+    "info": "With new equipment your alchemy labs are unstoppable. Labs x2!",
     "buildingIx": 8
   },
   {
-    "name": "CPS taps III!",
-    "cost": 300000000,
-    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
-    "buildingIx": -2
+    "name": "Crazy scientists",
+    "cost": 4750000000,
+    "info": "Fearless crazy scientists… what could go wrong? Alchemy labs x2!",
+    "buildingIx": 8
   },
   {
-    "name": "Chocotomos effect",
-    "cost": 940000000,
-    "info": "No one understands it, but it creates chocolate out of nothing. Collider x2!",
+    "name": "Dangerous substances",
+    "cost": 35625000000,
+    "info": "Lets use some dangerous substances. Alchemy labs x2!",
+    "buildingIx": 8
+  },
+  {
+    "name": "Essence of chocolate",
+    "cost": 356250000000,
+    "info": "Your scientists finally discovered the true esence of chocolate. Labs x2!",
+    "buildingIx": 8
+  },
+
+
+
+  {
+    "name": "Chocolitosis effect",
+    "cost": 5500000000,
+    "info": "No one understands it, but it creates chocolate out of nothing. Colliders x2!",
     "buildingIx": 9
   },
   {
-    "name": "Stargate",
-    "cost": 9400000000,
-    "info": "Stargate stabilizes the portals to double their production!",
+    "name": "Precise collisions",
+    "cost": 27500000000,
+    "info": "More precise, more efficient! Hadron colliders x2!",
+    "buildingIx": 9
+  },
+  {
+    "name": "Chocolitosis effect",
+    "cost": 206250000000,
+    "info": "No one understands it, but it creates chocolate out of nothing. Collider x2!",
+    "buildingIx": 9
+  },
+
+
+
+  {
+    "name": "Warm holes",
+    "cost": 30000000000,
+    "info": "Warmhole portals are faster. Portals x2",
     "buildingIx": 10
   },
   {
-    "name": "CPS taps IV!",
-    "cost": 2000000000,
-    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
-    "buildingIx": -2
-  },
-  {
     "name": "Stargate",
-    "cost": 9400000000,
-    "info": "Stargate stabilizes the portals to double their production!",
+    "cost": 150000000000,
+    "info": "Stargates stabilize the portals to double their production!",
     "buildingIx": 10
   },
   {
-    "name": "CPS taps V!",
-    "cost": 20000000000,
-    "info": "Every tap gives you additional 3 % of your CPS as chocolate!",
-    "buildingIx": -2
+    "name": "SG1",
+    "cost": 900000000000,
+    "info": "SG1 came back through your portal and brought chocolate! Portals x2",
+    "buildingIx": 10
   },
+
+
+
   {
     "name": "Time lords",
-    "cost": 740000000000,
+    "cost": 350000000000,
     "info": "Timelords can teach you all the secrets of time flow. Time machines x2!",
     "buildingIx": 11
   },
+
+
+
   {
     "name": "End of the World",
-    "cost": 1000000000000,
+    "cost": 5000000000000,
     "info": "Turn everything into chocolate!",
     "buildingIx": -3
   }
