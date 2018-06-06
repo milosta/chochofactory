@@ -43,13 +43,13 @@
   },
   {
     "name": "Two hands tap",
-    "cost": 70000,
+    "cost": 65000,
     "info": "Tapping with two hands? Why not. Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "Three hands tap",
-    "cost": 150000,
+    "cost": 135000,
     "info": "What about a third hand? You know what I mean! Taps x2!",
     "buildingIx": -1
   },
@@ -61,31 +61,31 @@
   },
   {
     "name": "Mighty tap",
-    "cost": 650000,
+    "cost": 850000,
     "info": "Man, you are definitely gonna need a new screen. Taps x2!",
     "buildingIx": -1
   },
   {
     "name": "No hands tap",
-    "cost": 1350000,
+    "cost": 1650000,
     "info": "Look ma, no hands! This peculiar way of tapping doubles the production!",
     "buildingIx": -1
   },
   {
     "name": "Mysterious tap",
-    "cost": 2800000,
+    "cost": 3400000,
     "info": "Tapping x2!",
     "buildingIx": -1
   },
   {
     "name": "Magical tap",
-    "cost": 6000000,
+    "cost": 8000000,
     "info": "Tapping x2!",
     "buildingIx": -1
   },
   {
     "name": "Mystical tap",
-    "cost": 15000000,
+    "cost": 20000000,
     "info": "Tapping x2!",
     "buildingIx": -1
   },
