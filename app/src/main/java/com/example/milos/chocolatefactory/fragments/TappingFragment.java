@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.model.DataStorage;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment with tapping button.
  * Use the {@link TappingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -20,6 +22,8 @@ public class TappingFragment extends Fragment{
 
     private Activity activity;
     private ImageButton mChocolateButton;
+
+    private TextView mCPT;
 
     /**
      * Use this factory method to create a new instance of
@@ -53,6 +57,10 @@ public class TappingFragment extends Fragment{
         });
         this.activity = getActivity();
 
+        // DEBUG
+        mCPT = (TextView) view.findViewById(R.id.CPT);
+        DataStorage ds = DataStorage.getInstance();
+        mCPT.setText(ds.getTapStats());
         return view;
     }
 

@@ -2,6 +2,7 @@ package com.example.milos.chocolatefactory.model;
 
 import android.content.Context;
 
+import com.example.milos.chocolatefactory.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -97,6 +98,11 @@ public class DataStorage {
     }
     public List<Upgrade> getUpgradeList() {
         return upgradeList;
+    }
+
+    public String getTapStats() {
+        return Utils.toString(clickVal) + " + " + Utils.toString((long)cpsFractionClick *cps) +
+                " = " + Utils.toString(clickVal + (long)(cpsFractionClick *cps));
     }
 
     public void oneSec() {

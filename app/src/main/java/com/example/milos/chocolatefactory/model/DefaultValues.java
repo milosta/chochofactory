@@ -35,7 +35,7 @@ public class DefaultValues {
             R.drawable.ic_building_time_machine,
     };
     public static final int[] upgradeIcons = {
-            R.drawable.ic_upgrade_final,
+            R.drawable.upgrade_final,
             R.drawable.ic_upgrade_tap_cps,
             R.drawable.ic_upgrade_tap,
             R.drawable.ic_upgrade_cursor,
