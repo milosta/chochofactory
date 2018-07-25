@@ -12,8 +12,14 @@ public class Utils {
     private static DecimalFormat formatterNormal = getFormatter("###,###");
     private static DecimalFormat formatterScientific = getFormatter("0.###E0");
 
+    private static DecimalFormat getFormatter(String pattern) {
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+        return new DecimalFormat(pattern, symbols);
+    }
 
-    public static String toString(Long num) {
+// https://stackoverflow.com/questions/16319237/cant-put-double-sharedpreferences
+
+    public static String toStringScientific(Long num) {
         if (num < 1000000)
             return formatterNormal.format(num);
         else {
@@ -21,9 +27,17 @@ public class Utils {
         }
     }
 
-    private static DecimalFormat getFormatter(String pattern) {
-        DecimalFormatSymbols symbols = new DecimalFormatSymbols();
-//        symbols.setGroupingSeparator(' ');
-        return new DecimalFormat(pattern, symbols);
+    public static String toString(Long num1) {
+        Double num = (double)(num1); // FIXME
+        int places = 0;
+        while(num >= 1000) {
+            num /= 1000;
+            places++;
+        }
+
+        Double rest = Math.floor(num * 100) / 100;
+
+        String[] suffixes = {"", "K", "M", "B", "T", "Q"};
+        return rest.toString() + " " + suffixes[places];
     }
 }
