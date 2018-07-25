@@ -100,8 +100,9 @@ public class DataStorage {
         return upgradeList;
     }
 
+    /** Debuging function for current tap statistics  */
     public String getTapStats() {
-        return Utils.toString(clickVal) + " + " + Utils.toString((long)cpsFractionClick *cps) +
+        return Utils.toString(clickVal) + " + " + Utils.toString((long)(cpsFractionClick *cps)) +
                 " = " + Utils.toString(clickVal + (long)(cpsFractionClick *cps));
     }
 
