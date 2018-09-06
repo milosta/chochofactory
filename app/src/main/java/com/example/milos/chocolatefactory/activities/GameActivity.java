@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.UiUtils;
 import com.example.milos.chocolatefactory.Utils;
 import com.example.milos.chocolatefactory.fragments.BuildingFragment;
 import com.example.milos.chocolatefactory.fragments.TappingFragment;
@@ -93,7 +94,7 @@ public class GameActivity
     @Override
     protected void onResume() {
         super.onResume();
-        hide_satus_bar();
+        UiUtils.hideStatusBar(this);
         updateUi();
     }
 
@@ -107,17 +108,6 @@ public class GameActivity
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacks(runnable);
-    }
-
-    private void hide_satus_bar() {
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-        // Remember that you should never show the action bar if the
-        // status bar is hidden, so hide that too if necessary.
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null)
-            actionBar.hide();
     }
 
     public void updateUi() {

@@ -13,21 +13,25 @@ import com.example.milos.chocolatefactory.UiUtils;
 public class SplashScreenActivity extends AppCompatActivity {
 
     // Splash screen timer in milliseconds
-    private static final int TIME_OUT = 1500;
+    private static final int TIME_OUT = 1000;
+
+    Handler handler = new Handler();
+    Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        new Handler().postDelayed(new Runnable() {
+        runnable = new Runnable() {
             @Override
             public void run() {
                 Intent i = new Intent(SplashScreenActivity.this, GameActivity.class);
                 startActivity(i);
                 finish();
             }
-        }, TIME_OUT);
+        };
+        new Handler().postDelayed(runnable, TIME_OUT);
     }
 
     @Override
@@ -35,4 +39,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onResume();
         UiUtils.hideStatusBar(this);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacks(runnable);
+    }
+
 }
