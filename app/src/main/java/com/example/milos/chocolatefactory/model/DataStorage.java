@@ -67,8 +67,8 @@ public class DataStorage {
         SharedPref.write("buildingList", gson.toJson(buildingList));
         SharedPref.write("upgradeList", gson.toJson(upgradeList));
 
-        Date currentTime = Calendar.getInstance().getTime();
-        SharedPref.write("exitTime", currentTime.toString());
+        Long currentTime = System.currentTimeMillis() / 1000;
+        SharedPref.write("exitTime", currentTime);
     }
 
     public Long getSecondsFromExit() {
