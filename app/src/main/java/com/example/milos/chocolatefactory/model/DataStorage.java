@@ -9,11 +9,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
- * Created by milos on 16.4.18.
+ * Class DataStorage handles application data.
  */
 
 public class DataStorage {
@@ -64,6 +66,14 @@ public class DataStorage {
 
         SharedPref.write("buildingList", gson.toJson(buildingList));
         SharedPref.write("upgradeList", gson.toJson(upgradeList));
+
+        Date currentTime = Calendar.getInstance().getTime();
+        SharedPref.write("exitTime", currentTime.toString());
+    }
+
+    public Long getSecondsFromExit() {
+        Long defVal = 0L;
+        return SharedPref.read("exitTime", defVal);
     }
 
     public Long getCount() {

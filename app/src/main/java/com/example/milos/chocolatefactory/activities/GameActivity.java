@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.UiUtils;
@@ -96,6 +97,10 @@ public class GameActivity
         super.onResume();
         UiUtils.hideStatusBar(this);
         updateUi();
+        Long secCount = mDS.getSecondsFromExit();
+        if (secCount > 10) {
+            Toast.makeText(this, secCount.toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

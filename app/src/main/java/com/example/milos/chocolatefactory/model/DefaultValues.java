@@ -40,4 +40,6 @@ public class DefaultValues {
             R.drawable.ic_upgrade_tap,
             R.drawable.ic_upgrade_cursor,
     };
+
+//    public static final Long
 }
