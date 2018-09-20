@@ -73,7 +73,12 @@ public class DataStorage {
 
     public Long getSecondsFromExit() {
         Long defVal = 0L;
-        return SharedPref.read("exitTime", defVal);
+        long exitTime = SharedPref.read("exitTime", defVal);
+        if (exitTime == defVal) {
+            return defVal;
+        }
+        Long currentTime = System.currentTimeMillis() / 1000;
+        return currentTime - exitTime;
     }
 
     public Long getCount() {
@@ -87,6 +92,9 @@ public class DataStorage {
             return false;
         this.count -= count;
         return true;
+    }
+    public void increaseCount(Long count) {
+        this.count += count;
     }
 
     public Long getCps() {

@@ -20,6 +20,7 @@ import com.example.milos.chocolatefactory.fragments.BuildingFragment;
 import com.example.milos.chocolatefactory.fragments.TappingFragment;
 import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
 import com.example.milos.chocolatefactory.model.DataStorage;
+import com.example.milos.chocolatefactory.model.DefaultValues;
 
 public class GameActivity
         extends AppCompatActivity
@@ -77,6 +78,20 @@ public class GameActivity
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, TappingFragment.newInstance());
         transaction.commit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        UiUtils.hideStatusBar(this);
+
+        Long secCount = mDS.getSecondsFromExit();
+
+        if (secCount > DefaultValues.offlineIgnoreSeconds) {
+            double money = secCount * mDS.getCps() * DefaultValues.offlineKoeficient;
+            mDS.increaseCount((long)money);
+            Toast.makeText(this, "Offline Earnings: " + Utils.toString((long)money), Toast.LENGTH_LONG).show();
+        }
 
         // start CPSing, its running in current thread, so no thread-safeness needed
         final long DELAY = 1000; //milliseconds
@@ -90,23 +105,15 @@ public class GameActivity
             }
         };
         handler.postDelayed(runnable, DELAY);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        UiUtils.hideStatusBar(this);
         updateUi();
-        Long secCount = mDS.getSecondsFromExit();
-        if (true) {
-            Toast.makeText(this, secCount.toString(), Toast.LENGTH_SHORT).show();
-        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         mDS.saveData();
+        handler.removeCallbacks(runnable);
     }
 
     @Override
