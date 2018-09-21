@@ -41,6 +41,9 @@ public class DefaultValues {
             R.drawable.ic_upgrade_cursor,
     };
 
-    public static final float offlineKoeficient = 0.5f;
+    public static final float offlineFirstKoeficient = 0.5f;
+    public static final float offlineRestKoeficient = 0.25f;
+
     public static final int offlineIgnoreSeconds = 10;
+    public static final int offlineFirstPeriod = 3600 * 4;
 }

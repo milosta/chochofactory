@@ -1,6 +1,8 @@
 package com.example.milos.chocolatefactory.activities;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -22,15 +24,14 @@ import com.example.milos.chocolatefactory.fragments.UpgradeFragment;
 import com.example.milos.chocolatefactory.model.DataStorage;
 import com.example.milos.chocolatefactory.model.DefaultValues;
 
+/**
+ * Main game activity
+ */
+
 public class GameActivity
         extends AppCompatActivity
         implements TappingFragment.OnFragmentInteractionListener {
-    /**
-     * singleton
-     * getry
-     * setry synchronized
-     * thread safe
-     */
+
     private TextView mCountTV;
     private TextView mCpsTV;
     private DataStorage mDS = DataStorage.getInstance();
@@ -88,9 +89,29 @@ public class GameActivity
         Long secCount = mDS.getSecondsFromExit();
 
         if (secCount > DefaultValues.offlineIgnoreSeconds) {
-            double money = secCount * mDS.getCps() * DefaultValues.offlineKoeficient;
+            double money = 0;
+            if (secCount > DefaultValues.offlineFirstPeriod) {
+                money += (secCount - DefaultValues.offlineFirstPeriod) * mDS.getCps() * DefaultValues.offlineRestKoeficient;
+                secCount = (long) DefaultValues.offlineFirstPeriod;
+            }
+            money += secCount * mDS.getCps() * DefaultValues.offlineFirstKoeficient;
+
             mDS.increaseCount((long)money);
-            Toast.makeText(this, "Offline Earnings: " + Utils.toString((long)money), Toast.LENGTH_LONG).show();
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Offline Earnings:")
+                    .setMessage(Utils.toString((long)money))
+                    .setCancelable(false)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
+        else if (secCount > 0) {
+            double money = secCount * mDS.getCps() * DefaultValues.offlineFirstKoeficient;
+            mDS.increaseCount((long)money);
         }
 
         // start CPSing, its running in current thread, so no thread-safeness needed
@@ -128,7 +149,7 @@ public class GameActivity
     }
 
     /*****************************************************************
-    interations listeners
+    interaction listeners
     *****************************************************************/
 
     public void chocolateClicked() {
@@ -136,9 +157,4 @@ public class GameActivity
         updateUi();
     }
 
-//    public void onListFragmentInteraction(DummyContent.DummyItem item) {
-//        ;
-//        chocolateClicked();
-//        updateUi();
-//    }
 }
