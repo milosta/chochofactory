@@ -96,7 +96,7 @@ public class UpgradeFragment
         }
         else {
             Building building = mBuildings.get(buldingIx);
-            Long cps_increase = building.multiplyCps(2);
+            double cps_increase = building.multiplyCps(2);
             mDS.increaseCps(cps_increase * building.getCount());
         }
 

@@ -96,11 +96,11 @@ public class GameActivity
             }
             money += secCount * mDS.getCps() * DefaultValues.offlineFirstKoeficient;
 
-            mDS.increaseCount((long)money);
+            mDS.increaseCount(money);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Offline Earnings:")
-                    .setMessage(Utils.toString((long)money))
+                    .setMessage(Utils.toString(money))
                     .setCancelable(false)
                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -111,7 +111,7 @@ public class GameActivity
         }
         else if (secCount > 0) {
             double money = secCount * mDS.getCps() * DefaultValues.offlineFirstKoeficient;
-            mDS.increaseCount((long)money);
+            mDS.increaseCount(money);
         }
 
         // start CPSing, its running in current thread, so no thread-safeness needed

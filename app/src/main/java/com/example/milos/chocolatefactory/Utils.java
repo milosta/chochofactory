@@ -19,7 +19,7 @@ public class Utils {
 
 // https://stackoverflow.com/questions/16319237/cant-put-double-sharedpreferences
 
-    public static String toStringScientific(Long num) {
+    public static String toStringScientific(double num) {
         if (num < 1000000)
             return formatterNormal.format(num);
         else {

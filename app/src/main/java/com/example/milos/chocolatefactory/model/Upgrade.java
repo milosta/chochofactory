@@ -8,11 +8,11 @@ import android.support.annotation.NonNull;
 
 public class Upgrade implements Comparable {
     private String name;
-    private Long cost;
+    private double cost;
     private String info;
     private int buildingIx;
 
-    public Upgrade(String name, Long cost, String info, int buildingIx) {
+    public Upgrade(String name, double cost, String info, int buildingIx) {
         this.name = name;
         this.cost = cost;
         this.info = info;
@@ -23,7 +23,7 @@ public class Upgrade implements Comparable {
         return name;
     }
 
-    public Long getCost() {
+    public double getCost() {
         return cost;
     }
 
