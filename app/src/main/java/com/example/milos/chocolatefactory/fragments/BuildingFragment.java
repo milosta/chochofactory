@@ -35,6 +35,7 @@ public class BuildingFragment
     private BuildingAdapter mAdapter;
     private RecyclerView mRecyclerView;
     private Toast mToast;
+    private GameActivity activity;
 
     /**
      * Use this factory method to create a new instance of
@@ -65,6 +66,8 @@ public class BuildingFragment
             //set separator
             mRecyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
+        this.activity = (GameActivity) getActivity();
+
         return view;
     }
 
@@ -88,7 +91,6 @@ public class BuildingFragment
         mAdapter.notifyItemChanged(position);
         mDS.increaseCps(building.getCps());
 
-        GameActivity activity = (GameActivity) getActivity();
         activity.updateUi();
     }
 }

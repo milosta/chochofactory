@@ -29,8 +29,7 @@ import com.example.milos.chocolatefactory.model.DefaultValues;
  */
 
 public class GameActivity
-        extends AppCompatActivity
-        implements TappingFragment.OnFragmentInteractionListener {
+        extends AppCompatActivity {
 
     private TextView mCountTV;
     private TextView mCpsTV;
@@ -147,14 +146,4 @@ public class GameActivity
         mCountTV.setText(Utils.toString(mDS.getCount()));
         mCpsTV.setText(Utils.toString(mDS.getCps()));
     }
-
-    /*****************************************************************
-    interaction listeners
-    *****************************************************************/
-
-    public void chocolateClicked() {
-        mDS.click();
-        updateUi();
-    }
-
 }

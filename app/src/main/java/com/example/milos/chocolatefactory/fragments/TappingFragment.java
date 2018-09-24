@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.milos.chocolatefactory.R;
+import com.example.milos.chocolatefactory.activities.GameActivity;
 import com.example.milos.chocolatefactory.model.DataStorage;
 
 
@@ -20,10 +21,9 @@ import com.example.milos.chocolatefactory.model.DataStorage;
  */
 public class TappingFragment extends Fragment{
 
-    private Activity activity;
+    private DataStorage mDS = DataStorage.getInstance();
+    private GameActivity activity;
     private ImageButton mChocolateButton;
-
-    private TextView mCPT;
 
     /**
      * Use this factory method to create a new instance of
@@ -49,29 +49,23 @@ public class TappingFragment extends Fragment{
 
         // Set Views
         mChocolateButton = (ImageButton) view.findViewById(R.id.chocolateButton);
-        mChocolateButton.setOnClickListener(new View.OnClickListener() { // (this;) implements View.OnClickListener
+        mChocolateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((OnFragmentInteractionListener) activity).chocolateClicked();
+                chocolateClicked();
             }
         });
-        this.activity = getActivity();
+        this.activity = (GameActivity) getActivity();
 
         // DEBUG
-        mCPT = (TextView) view.findViewById(R.id.CPT);
-        DataStorage ds = DataStorage.getInstance();
-        mCPT.setText(ds.getTapStats());
+        TextView mCPT = (TextView) view.findViewById(R.id.CPT);
+        mCPT.setText(mDS.getTapStats());
+
         return view;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     */
-    public interface OnFragmentInteractionListener {
-        void chocolateClicked();
+    public void chocolateClicked() {
+        mDS.click();
+        activity.updateUi();
     }
-
 }
