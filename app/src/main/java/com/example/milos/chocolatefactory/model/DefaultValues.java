@@ -13,9 +13,9 @@ import java.util.Scanner;
 public class DefaultValues {
     private DefaultValues() {}
 
-    public static final Long count = 0L;
-    public static final Long cps = 0L;
-    public static final Long clickVal = 1L;
+    public static final double count = 0;
+    public static final double cps = 0L;
+    public static final double clickVal = 1L;
     public static final float cpsFractionClick = 0;
 
     public static final double buildingCostMultiplier = 1.18;

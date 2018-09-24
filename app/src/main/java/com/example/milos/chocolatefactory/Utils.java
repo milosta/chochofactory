@@ -27,8 +27,7 @@ public class Utils {
         }
     }
 
-    public static String toString(Long num1) {
-        Double num = (double)(num1); // FIXME
+    public static String toString(double num) {
         int places = 0;
         while(num >= 1000) {
             num /= 1000;

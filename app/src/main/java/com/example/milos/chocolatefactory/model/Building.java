@@ -6,11 +6,11 @@ package com.example.milos.chocolatefactory.model;
 
 public class Building {
     private String name;
-    private Long cost;
-    private Long count;
-    private Long cps;
+    private double cost;
+    private int count;
+    private double cps;
 
-    public Building(String name, Long cost, Long count, Long cps) {
+    public Building(String name, double cost, int count, double cps) {
         this.name = name;
         this.cost = cost;
         this.count = count;
@@ -18,13 +18,13 @@ public class Building {
     }
 
     public void upgrade() {
-        cost = (long) (cost * DefaultValues.buildingCostMultiplier);
+        cost = cost * DefaultValues.buildingCostMultiplier;
         count ++;
     }
 
-    public Long multiplyCps(double multiplier) {
-        Long old_cps = cps;
-        cps = (long) (cps * multiplier);
+    public double multiplyCps(double multiplier) {
+        double old_cps = cps;
+        cps = cps * multiplier;
         return cps - old_cps;
     }
 
@@ -32,15 +32,15 @@ public class Building {
         return name;
     }
 
-    public Long getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public Long getCount() {
+    public int getCount() {
         return count;
     }
 
-    public Long getCps() {
+    public double getCps() {
         return cps;
     }
 }

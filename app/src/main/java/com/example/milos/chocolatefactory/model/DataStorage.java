@@ -22,9 +22,9 @@ public class DataStorage {
     private static final DataStorage ourInstance = new DataStorage();
     private Gson gson = new Gson();
 
-    private Long count;
-    private Long cps;
-    private Long clickVal;
+    private double count;
+    private double cps;
+    private double clickVal;
     private float cpsFractionClick;
     private List<Building> buildingList;
     private List<Upgrade> upgradeList;
@@ -81,29 +81,29 @@ public class DataStorage {
         return currentTime - exitTime;
     }
 
-    public Long getCount() {
+    public double getCount() {
         return count;
     }
-    public void setCount(Long count) {
+    public void setCount(double count) {
         this.count = count;
     }
-    public boolean decreaseCount(Long count) {
+    public boolean decreaseCount(double count) {
         if (this.count < count)
             return false;
         this.count -= count;
         return true;
     }
-    public void increaseCount(Long count) {
+    public void increaseCount(double count) {
         this.count += count;
     }
 
-    public Long getCps() {
+    public double getCps() {
         return cps;
     }
-    public void setCps(Long count) {
+    public void setCps(double cps) {
         this.cps = cps;
     }
-    public void increaseCps(Long count) {
+    public void increaseCps(double count) {
         cps += count;
     }
 
@@ -120,18 +120,16 @@ public class DataStorage {
 
     /** Debuging function for current tap statistics  */
     public String getTapStats() {
-        return Utils.toString(clickVal) + " + " + Utils.toString((long)(cpsFractionClick *cps)) +
-                " = " + Utils.toString(clickVal + (long)(cpsFractionClick *cps));
+        return Utils.toString(clickVal) + " + " + Utils.toString(cpsFractionClick *cps) +
+                " = " + Utils.toString(clickVal + cpsFractionClick *cps);
     }
 
     public void oneSec() {
         count += cps;
     }
     public void click() {
-        Long addition = (long) (clickVal + cps * cpsFractionClick);
-        count += addition;
+        count += clickVal + cps * cpsFractionClick;
     }
-
     public void  multiplyClickVal(double multiplier) {
         clickVal = (long) (clickVal * multiplier);
     }

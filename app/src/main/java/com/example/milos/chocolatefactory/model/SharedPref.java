@@ -45,4 +45,16 @@ public class SharedPref
         editor.putFloat(key, value);
         editor.apply();
     }
+
+    public static double read(String key, double defValue) {
+        return Double.longBitsToDouble(mSharedPref.getLong(key, Double.doubleToLongBits(defValue)));
+    }
+    public static void write(String key, double value) {
+        SharedPreferences.Editor editor = mSharedPref.edit();
+        editor.putLong(key, Double.doubleToRawLongBits(value));
+        editor.apply();
+    }
+
+// Kotlin
+// https://stackoverflow.com/questions/16319237/cant-put-double-sharedpreferences
 }
