@@ -1,5 +1,6 @@
 package com.example.milos.chocolatefactory.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -58,8 +59,7 @@ public class BuildingFragment
             mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
             mBuildings = mDS.getBuildingList();
 
-            mAdapter = new BuildingAdapter(mBuildings,
-                                        (BuildingAdapter.OnListFragmentInteractionListener) this);
+            mAdapter = new BuildingAdapter(mBuildings, this);
             mRecyclerView.setAdapter(mAdapter);
 
             //set separator
@@ -70,6 +70,7 @@ public class BuildingFragment
         return view;
     }
 
+    @SuppressLint("ShowToast")
     public void onClick(View view) {
         int position = mRecyclerView.getChildAdapterPosition(view);
         Building building = mBuildings.get(position);

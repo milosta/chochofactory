@@ -1,6 +1,6 @@
 package com.example.milos.chocolatefactory.fragments;
 
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -62,8 +62,7 @@ public class UpgradeFragment
 
             mUpgrades = mDS.getUpgradeList();
             mBuildings = mDS.getBuildingList();
-            mAdapter = new UpgradeAdapter(mUpgrades,
-                    (UpgradeAdapter.OnListFragmentInteractionListener) this);
+            mAdapter = new UpgradeAdapter(mUpgrades,this);
             mRecyclerView.setAdapter(mAdapter);
 
             //set separator
@@ -107,6 +106,7 @@ public class UpgradeFragment
         activity.updateUi();
     }
 
+    @SuppressLint("ShowToast")
     private void showToast(String msg) {
         if (mToast == null) {
             mToast = Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT);

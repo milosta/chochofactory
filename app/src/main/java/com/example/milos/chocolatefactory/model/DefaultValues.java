@@ -2,12 +2,9 @@ package com.example.milos.chocolatefactory.model;
 
 import com.example.milos.chocolatefactory.R;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 /**
- * Created by milos on 27.5.18.
+ * Configuration file.
  */
 
 public class DefaultValues {

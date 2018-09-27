@@ -1,6 +1,5 @@
 package com.example.milos.chocolatefactory.activities;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Handler;
@@ -11,9 +10,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.UiUtils;
@@ -69,10 +66,10 @@ public class GameActivity
 
         mDS.init(getApplicationContext());
 
-        mCountTV = (TextView) findViewById(R.id.choco_count);
-        mCpsTV = (TextView) findViewById(R.id.CPS);
+        mCountTV = findViewById(R.id.choco_count);
+        mCpsTV = findViewById(R.id.CPS);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

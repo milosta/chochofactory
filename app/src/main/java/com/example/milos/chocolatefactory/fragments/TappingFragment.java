@@ -49,12 +49,12 @@ public class TappingFragment
         View view = inflater.inflate(R.layout.fragment_tapping, container, false);
 
         // Set Views
-        mChocolateButton = (ImageButton) view.findViewById(R.id.chocolateButton);
+        mChocolateButton = view.findViewById(R.id.chocolateButton);
         mChocolateButton.setOnClickListener(this);
         this.activity = (GameActivity) getActivity();
 
         // DEBUG
-        TextView mCPT = (TextView) view.findViewById(R.id.CPT);
+        TextView mCPT = view.findViewById(R.id.CPT);
         mCPT.setText(mDS.getTapStats());
 
         return view;
