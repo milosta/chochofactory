@@ -1,11 +1,9 @@
 package com.example.milos.chocolatefactory.activities;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.UiUtils;

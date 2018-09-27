@@ -1,6 +1,5 @@
 package com.example.milos.chocolatefactory.fragments;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,7 +18,9 @@ import com.example.milos.chocolatefactory.model.DataStorage;
  * Use the {@link TappingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class TappingFragment extends Fragment{
+public class TappingFragment
+        extends Fragment
+        implements View.OnClickListener {
 
     private DataStorage mDS = DataStorage.getInstance();
     private GameActivity activity;
@@ -49,12 +50,7 @@ public class TappingFragment extends Fragment{
 
         // Set Views
         mChocolateButton = (ImageButton) view.findViewById(R.id.chocolateButton);
-        mChocolateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chocolateClicked();
-            }
-        });
+        mChocolateButton.setOnClickListener(this);
         this.activity = (GameActivity) getActivity();
 
         // DEBUG
@@ -67,7 +63,7 @@ public class TappingFragment extends Fragment{
     /**
      * On click listenner for the chocolate bar.
      */
-    public void chocolateClicked() {
+    public void onClick(View view) {
         mDS.click();
         activity.updateUi();
     }
