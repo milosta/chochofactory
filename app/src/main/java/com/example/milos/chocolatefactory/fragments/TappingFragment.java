@@ -64,6 +64,9 @@ public class TappingFragment extends Fragment{
         return view;
     }
 
+    /**
+     * On click listenner for the chocolate bar.
+     */
     public void chocolateClicked() {
         mDS.click();
         activity.updateUi();

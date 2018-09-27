@@ -25,7 +25,7 @@ import com.example.milos.chocolatefactory.model.DataStorage;
 import com.example.milos.chocolatefactory.model.DefaultValues;
 
 /**
- * Main game activity
+ * The main game activity.
  */
 
 public class GameActivity
@@ -115,7 +115,6 @@ public class GameActivity
 
         // start CPSing, its running in current thread, so no thread-safeness needed
         final long DELAY = 1000; //milliseconds
-
         runnable = new Runnable() {
             public void run() {
                 mDS.oneSec();

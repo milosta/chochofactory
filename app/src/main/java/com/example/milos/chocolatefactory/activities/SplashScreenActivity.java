@@ -10,6 +10,11 @@ import android.view.View;
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.UiUtils;
 
+/**
+ * Initro splash screen activity.
+ * It is launcher Activity and starts {@link GameActivity}.
+ */
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     // Splash screen timer in milliseconds
