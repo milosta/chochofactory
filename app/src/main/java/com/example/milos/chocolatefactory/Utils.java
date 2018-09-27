@@ -17,8 +17,6 @@ public class Utils {
         return new DecimalFormat(pattern, symbols);
     }
 
-// https://stackoverflow.com/questions/16319237/cant-put-double-sharedpreferences
-
     public static String toStringScientific(double num) {
         if (num < 1000000)
             return formatterNormal.format(num);
@@ -33,10 +31,18 @@ public class Utils {
             num /= 1000;
             places++;
         }
-
         Double rest = Math.floor(num * 100) / 100;
 
-        String[] suffixes = {"", "K", "M", "B", "T", "Q"};
-        return rest.toString() + " " + suffixes[places];
+        char[] suffixes = {'\0', 'K', 'M', 'B', 'T', 'Q',
+                'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        char suffix;
+        if (places < suffixes.length){
+            suffix = suffixes[places];
+        }
+        else {
+            suffix = '∞';
+        }
+        return rest.toString() + " " + suffix;
     }
 }
