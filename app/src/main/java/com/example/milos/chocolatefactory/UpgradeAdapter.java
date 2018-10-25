@@ -65,7 +65,8 @@ public class UpgradeAdapter extends RecyclerView.Adapter<UpgradeAdapter.ViewHold
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        // needs to be static , because otherwise it holds ref to outside class
         public View mView;
         public ImageView mImageView;
         public TextView mNameView;

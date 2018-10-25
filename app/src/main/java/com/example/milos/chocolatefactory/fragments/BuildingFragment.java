@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -50,6 +51,8 @@ public class BuildingFragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //TODO inherit from listview, set empty view
+
         View view = inflater.inflate(R.layout.fragment_building, container, false);
 
         // Set layout manager and the adapter
@@ -62,13 +65,16 @@ public class BuildingFragment
             mAdapter = new BuildingAdapter(mBuildings, this);
             mRecyclerView.setAdapter(mAdapter);
 
-            //set separator
+            //set Item separator and animator
+            mRecyclerView.setItemAnimator(new DefaultItemAnimator());
             mRecyclerView.addItemDecoration(new DividerItemDecoration(context, LinearLayoutManager.VERTICAL));
         }
         this.activity = (GameActivity) getActivity();
 
         return view;
     }
+
+    // TODO: add activity in onAttach, remove in onDetach
 
     @SuppressLint("ShowToast")
     public void onClick(View view) {
