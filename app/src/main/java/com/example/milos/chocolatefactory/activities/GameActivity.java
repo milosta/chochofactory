@@ -23,6 +23,9 @@ import com.example.milos.chocolatefactory.model.DefaultValues;
 
 /**
  * The main game activity.
+ *
+ * Use database
+ * Live Data
  */
 
 public class GameActivity
