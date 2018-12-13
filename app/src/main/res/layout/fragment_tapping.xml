@@ -34,6 +34,5 @@
         android:layout_alignEnd="@+id/chocolateButton"
         android:layout_below="@+id/message"
         android:layout_marginTop="8dp"
-        android:text="CPT"
         android:textSize="15sp" />
 </RelativeLayout>

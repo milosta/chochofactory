@@ -40,7 +40,7 @@ public class GameActivity
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+            Fragment selectedFragment;
             switch (item.getItemId()) {
                 case R.id.navigation_tapping:
                     selectedFragment = TappingFragment.newInstance();
@@ -48,7 +48,7 @@ public class GameActivity
                 case R.id.navigation_building:
                     selectedFragment = BuildingFragment.newInstance();
                     break;
-                case R.id.navigation_upgrade:
+                default: // case R.id.navigation_upgrade
                     selectedFragment = UpgradeFragment.newInstance();
                     break;
             }

@@ -1,6 +1,7 @@
 package com.example.milos.chocolatefactory.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.milos.chocolatefactory.BuildConfig;
 import com.example.milos.chocolatefactory.R;
 import com.example.milos.chocolatefactory.activities.GameActivity;
 import com.example.milos.chocolatefactory.model.DataStorage;
@@ -24,7 +26,6 @@ public class TappingFragment
 
     private DataStorage mDS = DataStorage.getInstance();
     private GameActivity activity;
-    private ImageButton mChocolateButton;
 
     /**
      * Use this factory method to create a new instance of
@@ -43,19 +44,20 @@ public class TappingFragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tapping, container, false);
 
         // Set Views
-        mChocolateButton = view.findViewById(R.id.chocolateButton);
+        ImageButton mChocolateButton = view.findViewById(R.id.chocolateButton);
         mChocolateButton.setOnClickListener(this);
         this.activity = (GameActivity) getActivity();
 
-        // DEBUG
-        TextView mCPT = view.findViewById(R.id.CPT);
-        mCPT.setText(mDS.getTapStats());
+        if (BuildConfig.DEBUG) {
+            TextView mCPT = view.findViewById(R.id.CPT);
+            mCPT.setText(mDS.getTapStats());
+        }
 
         return view;
     }
